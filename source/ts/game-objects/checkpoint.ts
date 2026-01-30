@@ -1,12 +1,13 @@
 import { GameObject } from './game-object.js';
+import { COLOR_FILL, COLOR_CHECKPOINT } from '../utils/colors.js';
 
 export class CheckPoint extends GameObject {
     active: boolean = false;
 
     render(ctx: CanvasRenderingContext2D): void {
-        ctx.fillStyle = 'white';
+        ctx.fillStyle = COLOR_FILL;
         ctx.fillRect(this.x, this.y, this.width, this.height);
-        ctx.strokeStyle = 'magenta';
+        ctx.strokeStyle = COLOR_CHECKPOINT;
         ctx.lineWidth = 2;
         ctx.strokeRect(this.x, this.y, this.width, this.height);
     }

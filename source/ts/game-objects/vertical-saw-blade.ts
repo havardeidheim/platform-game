@@ -1,5 +1,5 @@
 import { GameObject } from './game-object.js';
-import { COLOR_DANGER_RED } from '../utils/colors.js';
+import { COLOR_FILL, COLOR_DANGER_RED } from '../utils/colors.js';
 
 export class VerticalSawBlade extends GameObject {
     private radius: number = 0;
@@ -41,7 +41,7 @@ export class VerticalSawBlade extends GameObject {
         }
         ctx.closePath();
 
-        ctx.fillStyle = 'white';
+        ctx.fillStyle = COLOR_FILL;
         ctx.fill();
         ctx.strokeStyle = COLOR_DANGER_RED;
         ctx.lineWidth = 2;

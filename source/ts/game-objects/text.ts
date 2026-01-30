@@ -1,4 +1,5 @@
 import { GameObject } from './game-object.js';
+import { COLOR_FILL, COLOR_STROKE } from '../utils/colors.js';
 
 export class Text extends GameObject {
     text: string;
@@ -9,9 +10,9 @@ export class Text extends GameObject {
     }
 
     render(ctx: CanvasRenderingContext2D): void {
-        ctx.fillStyle = 'white';
+        ctx.fillStyle = COLOR_FILL;
         ctx.fillRect(this.x, this.y, this.width, this.height);
-        ctx.strokeStyle = 'magenta';
+        ctx.strokeStyle = COLOR_STROKE;
         ctx.lineWidth = 2;
         ctx.strokeRect(this.x, this.y, this.width, this.height);
     }
