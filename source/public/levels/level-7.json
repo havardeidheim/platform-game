@@ -59,7 +59,7 @@
       "range": 120
     },
     {
-      "type": "VerticalTrampoline",
+      "type": "BouncingBlock",
       "x": 365,
       "y": 47,
       "width": 20,
@@ -67,7 +67,7 @@
       "dimension": 1
     },
     {
-      "type": "VerticalTrampoline",
+      "type": "BouncingBlock",
       "x": 602,
       "y": 47,
       "width": 20,
@@ -155,7 +155,7 @@
       "dimension": 1
     },
     {
-      "type": "HorizontalTrampoline",
+      "type": "BouncingBlock",
       "x": 2172,
       "y": 107,
       "width": 60,
@@ -219,7 +219,7 @@
       "dimension": 1
     },
     {
-      "type": "HorizontalTrampoline",
+      "type": "BouncingBlock",
       "x": 2016,
       "y": -123,
       "width": 60,
@@ -235,7 +235,7 @@
       "dimension": 1
     },
     {
-      "type": "HorizontalTrampoline",
+      "type": "BouncingBlock",
       "x": 2332,
       "y": -123,
       "width": 60,
@@ -243,7 +243,7 @@
       "dimension": 1
     },
     {
-      "type": "HorizontalTrampoline",
+      "type": "BouncingBlock",
       "x": 2651,
       "y": -123,
       "width": 60,
@@ -251,7 +251,7 @@
       "dimension": 1
     },
     {
-      "type": "HorizontalTrampoline",
+      "type": "BouncingBlock",
       "x": 2967,
       "y": -123,
       "width": 60,

@@ -67,7 +67,7 @@
       "dimension": 1
     },
     {
-      "type": "VerticalTrampoline",
+      "type": "BouncingBlock",
       "x": 470,
       "y": 283,
       "width": 20,
@@ -75,7 +75,7 @@
       "dimension": 1
     },
     {
-      "type": "VerticalTrampoline",
+      "type": "BouncingBlock",
       "x": 637,
       "y": 232,
       "width": 20,
@@ -131,7 +131,7 @@
       "range": -200
     },
     {
-      "type": "VerticalTrampoline",
+      "type": "BouncingBlock",
       "x": 980,
       "y": 265,
       "width": 20,
@@ -139,7 +139,7 @@
       "dimension": 1
     },
     {
-      "type": "VerticalTrampoline",
+      "type": "BouncingBlock",
       "x": 798,
       "y": 524,
       "width": 10,

@@ -259,7 +259,7 @@
       "dimension": 1
     },
     {
-      "type": "VerticalTrampoline",
+      "type": "BouncingBlock",
       "x": 1630,
       "y": -140,
       "width": 20,
