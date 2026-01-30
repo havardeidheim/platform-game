@@ -41,7 +41,7 @@ import { UpRightTrampoline } from '../game-objects/up-right-trampoline.js';
 import { VerticalSawBlade } from '../game-objects/vertical-saw-blade.js';
 import { HorizontalSawBlade } from '../game-objects/horizontal-saw-blade.js';
 
-const typeMap: Record<string, new (...args: ConstructorParameters<typeof GameObject>) => GameObject> = {
+const typeMap: Record<string, new (...args: any[]) => GameObject> = {
     Block,
     InterBlock,
     SneakyBlock,
@@ -76,6 +76,9 @@ function createGameObject(data: LevelObjectData): GameObject {
     }
     if (sawBladeTypes.has(data.type)) {
         return new Ctor(data.x, data.y, data.diameter!, data.range!, data.dimension);
+    }
+    if (data.type === 'Text') {
+        return new Text(data.x, data.y, data.width, data.height, data.text ?? '');
     }
     return new Ctor(data.x, data.y, data.width, data.height, data.dimension);
 }

@@ -8,5 +8,8 @@ export const COLOR_BLOCK = 'teal';
 export const COLOR_CHECKPOINT = 'green';
 export const COLOR_GOAL = 'orange';
 
+export const COLOR_TEXT_BACKGROUND = '#f5f5dc';
+export const COLOR_TEXT_STROKE = '#000000';
+
 export const COLOR_HTML_BACKGROUND = '#000';
 export const COLOR_CANVAS_BORDER = '#333';
