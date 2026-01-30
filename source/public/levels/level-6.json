@@ -1,0 +1,158 @@
+{
+  "level": 6,
+  "sourceFile": "RawLevel5",
+  "objects": [
+    {
+      "type": "CheckPoint",
+      "x": -10,
+      "y": 0,
+      "width": 40,
+      "height": 60,
+      "dimension": 1
+    },
+    {
+      "type": "UpRightTrampoline",
+      "x": -310,
+      "y": 70,
+      "width": 40,
+      "height": 40,
+      "dimension": 1
+    },
+    {
+      "type": "Block",
+      "x": -125,
+      "y": 60,
+      "width": 170,
+      "height": 20,
+      "dimension": 1
+    },
+    {
+      "type": "UpLeftTrampoline",
+      "x": 57,
+      "y": -85,
+      "width": 40,
+      "height": 40,
+      "dimension": 1
+    },
+    {
+      "type": "UpRightTrampoline",
+      "x": -310,
+      "y": -248,
+      "width": 40,
+      "height": 40,
+      "dimension": 1
+    },
+    {
+      "type": "FallingBlock",
+      "x": 475,
+      "y": -350,
+      "width": 80,
+      "height": 20,
+      "dimension": 1
+    },
+    {
+      "type": "UpRightTrampoline",
+      "x": 695,
+      "y": -203,
+      "width": 40,
+      "height": 40,
+      "dimension": 1
+    },
+    {
+      "type": "CheckPoint",
+      "x": 233,
+      "y": -410,
+      "width": 40,
+      "height": 60,
+      "dimension": 1
+    },
+    {
+      "type": "Block",
+      "x": 85,
+      "y": -350,
+      "width": 230,
+      "height": 40,
+      "dimension": 1
+    },
+    {
+      "type": "DangerousBlock",
+      "x": 685,
+      "y": -468,
+      "width": 60,
+      "height": 200,
+      "dimension": 1
+    },
+    {
+      "type": "DangerousBlock",
+      "x": 835,
+      "y": -330,
+      "width": 80,
+      "height": 200,
+      "dimension": 1
+    },
+    {
+      "type": "Block",
+      "x": 999,
+      "y": -320,
+      "width": 80,
+      "height": 20,
+      "dimension": 1
+    },
+    {
+      "type": "FallingBlock",
+      "x": 1206,
+      "y": -293,
+      "width": 80,
+      "height": 20,
+      "dimension": 1
+    },
+    {
+      "type": "FallingBlock",
+      "x": 1437,
+      "y": -293,
+      "width": 80,
+      "height": 20,
+      "dimension": 1
+    },
+    {
+      "type": "Block",
+      "x": 1350,
+      "y": -380,
+      "width": 20,
+      "height": 100,
+      "dimension": 1
+    },
+    {
+      "type": "SawBladeLeft",
+      "x": 1517,
+      "y": -314,
+      "width": 311,
+      "height": 40,
+      "dimension": 1
+    },
+    {
+      "type": "Goal",
+      "x": 1685,
+      "y": -352,
+      "width": 46,
+      "height": 60,
+      "dimension": 1
+    },
+    {
+      "type": "Block",
+      "x": 1650,
+      "y": -293,
+      "width": 80,
+      "height": 20,
+      "dimension": 1
+    },
+    {
+      "type": "Block",
+      "x": 1577,
+      "y": -383,
+      "width": 20,
+      "height": 100,
+      "dimension": 1
+    }
+  ]
+}

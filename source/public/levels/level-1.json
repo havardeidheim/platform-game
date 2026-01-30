@@ -1,0 +1,90 @@
+{
+  "level": 1,
+  "sourceFile": "RawLevel0",
+  "objects": [
+    {
+      "type": "CheckPoint",
+      "x": -20,
+      "y": 16,
+      "width": 40,
+      "height": 60,
+      "dimension": 1
+    },
+    {
+      "type": "Goal",
+      "x": 530,
+      "y": 16,
+      "width": 46,
+      "height": 60,
+      "dimension": 1
+    },
+    {
+      "type": "InterBlock",
+      "x": -250,
+      "y": 76,
+      "width": 1100,
+      "height": 20,
+      "dimension": 0
+    },
+    {
+      "type": "InterBlock",
+      "x": -250,
+      "y": -24,
+      "width": 20,
+      "height": 100,
+      "dimension": 0
+    },
+    {
+      "type": "InterBlock",
+      "x": 830,
+      "y": -24,
+      "width": 20,
+      "height": 100,
+      "dimension": 0
+    },
+    {
+      "type": "InterBlock",
+      "x": 386,
+      "y": 36,
+      "width": 40,
+      "height": 40,
+      "dimension": 0
+    },
+    {
+      "type": "Text",
+      "x": 72,
+      "y": -58,
+      "width": 109,
+      "height": 57,
+      "dimension": 0,
+      "text": "Use A and D to move "
+    },
+    {
+      "type": "Text",
+      "x": 362,
+      "y": -58,
+      "width": 100,
+      "height": 55,
+      "dimension": 0,
+      "text": "Use W to jump"
+    },
+    {
+      "type": "Text",
+      "x": -191,
+      "y": 27,
+      "width": 158,
+      "height": 27,
+      "dimension": 0,
+      "text": "CheckPoint &gt;&gt;"
+    },
+    {
+      "type": "Text",
+      "x": 586,
+      "y": 27,
+      "width": 100,
+      "height": 27,
+      "dimension": 0,
+      "text": "&lt;&lt; Goal"
+    }
+  ]
+}

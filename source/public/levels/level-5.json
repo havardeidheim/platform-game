@@ -1,0 +1,199 @@
+{
+  "level": 5,
+  "sourceFile": "RawLevel4",
+  "objects": [
+    {
+      "type": "DangerousBlock",
+      "x": -146,
+      "y": 80,
+      "width": 1250,
+      "height": 600,
+      "dimension": 2
+    },
+    {
+      "type": "DangerousBlock",
+      "x": 665,
+      "y": 418,
+      "width": 190,
+      "height": 40,
+      "dimension": 1
+    },
+    {
+      "type": "Block",
+      "x": 660,
+      "y": 350,
+      "width": 20,
+      "height": 80,
+      "dimension": 1
+    },
+    {
+      "type": "CheckPoint",
+      "x": -10,
+      "y": 20,
+      "width": 40,
+      "height": 60,
+      "dimension": 1
+    },
+    {
+      "type": "SawBladeUp",
+      "x": 304,
+      "y": 355,
+      "width": 40,
+      "height": 40,
+      "dimension": 1
+    },
+    {
+      "type": "SawBladeUp",
+      "x": 400,
+      "y": 355,
+      "width": 40,
+      "height": 85,
+      "dimension": 1
+    },
+    {
+      "type": "SawBladeDown",
+      "x": 400,
+      "y": 185,
+      "width": 40,
+      "height": 85,
+      "dimension": 1
+    },
+    {
+      "type": "Block",
+      "x": -35,
+      "y": 80,
+      "width": 200,
+      "height": 20,
+      "dimension": 1
+    },
+    {
+      "type": "VerticalTrampoline",
+      "x": 470,
+      "y": 283,
+      "width": 20,
+      "height": 80,
+      "dimension": 1
+    },
+    {
+      "type": "VerticalTrampoline",
+      "x": 637,
+      "y": 232,
+      "width": 20,
+      "height": 60,
+      "dimension": 1
+    },
+    {
+      "type": "FallingBlock",
+      "x": 860,
+      "y": 518,
+      "width": 120,
+      "height": 20,
+      "dimension": 1
+    },
+    {
+      "type": "Block",
+      "x": 660,
+      "y": 429,
+      "width": 200,
+      "height": 20,
+      "dimension": 1
+    },
+    {
+      "type": "Block",
+      "x": 284,
+      "y": 345,
+      "width": 420,
+      "height": 20,
+      "dimension": 1
+    },
+    {
+      "type": "Block",
+      "x": 840,
+      "y": 325,
+      "width": 20,
+      "height": 105,
+      "dimension": 1
+    },
+    {
+      "type": "FallingBlock",
+      "x": 840,
+      "y": 305,
+      "width": 140,
+      "height": 20,
+      "dimension": 1
+    },
+    {
+      "type": "SawBladeUp",
+      "x": 890,
+      "y": 355,
+      "width": 40,
+      "height": 200,
+      "dimension": 1
+    },
+    {
+      "type": "VerticalTrampoline",
+      "x": 980,
+      "y": 265,
+      "width": 20,
+      "height": 60,
+      "dimension": 1
+    },
+    {
+      "type": "VerticalTrampoline",
+      "x": 798,
+      "y": 524,
+      "width": 10,
+      "height": 10,
+      "dimension": 1
+    },
+    {
+      "type": "SawBladeUp",
+      "x": 840,
+      "y": 345,
+      "width": 40,
+      "height": 40,
+      "dimension": 1
+    },
+    {
+      "type": "Block",
+      "x": 637,
+      "y": 227,
+      "width": 20,
+      "height": 10,
+      "dimension": 1
+    },
+    {
+      "type": "Block",
+      "x": 470,
+      "y": 278,
+      "width": 20,
+      "height": 10,
+      "dimension": 1
+    },
+    {
+      "type": "Block",
+      "x": 553,
+      "y": 518,
+      "width": 250,
+      "height": 20,
+      "dimension": 1
+    },
+    {
+      "type": "Goal",
+      "x": 585,
+      "y": 458,
+      "width": 46,
+      "height": 60,
+      "dimension": 1
+    },
+    {
+      "type": "Text",
+      "x": 337,
+      "y": 97,
+      "width": 223,
+      "height": 27,
+      "dimension": 0,
+      "text": "&lt;&lt; Still Dangerous &gt;&gt;"
+    }
+  ]
+}

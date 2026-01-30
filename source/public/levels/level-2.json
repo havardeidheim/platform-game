@@ -1,0 +1,177 @@
+{
+  "level": 2,
+  "sourceFile": "RawLevel1",
+  "objects": [
+    {
+      "type": "CheckPoint",
+      "x": -5,
+      "y": 10,
+      "width": 40,
+      "height": 60,
+      "dimension": 1
+    },
+    {
+      "type": "Block",
+      "x": 400,
+      "y": 190,
+      "width": 300,
+      "height": 20,
+      "dimension": 1
+    },
+    {
+      "type": "Block",
+      "x": 380,
+      "y": 90,
+      "width": 20,
+      "height": 120,
+      "dimension": 1
+    },
+    {
+      "type": "Block",
+      "x": 700,
+      "y": 90,
+      "width": 20,
+      "height": 120,
+      "dimension": 1
+    },
+    {
+      "type": "Block",
+      "x": 400,
+      "y": 320,
+      "width": 400,
+      "height": 20,
+      "dimension": 2
+    },
+    {
+      "type": "Block",
+      "x": 380,
+      "y": 220,
+      "width": 20,
+      "height": 120,
+      "dimension": 2
+    },
+    {
+      "type": "Block",
+      "x": 800,
+      "y": 220,
+      "width": 20,
+      "height": 120,
+      "dimension": 2
+    },
+    {
+      "type": "Block",
+      "x": 890,
+      "y": 385,
+      "width": 120,
+      "height": 20,
+      "dimension": 1
+    },
+    {
+      "type": "CheckPoint",
+      "x": 927,
+      "y": 325,
+      "width": 40,
+      "height": 60,
+      "dimension": 1
+    },
+    {
+      "type": "Block",
+      "x": 1070,
+      "y": 385,
+      "width": 120,
+      "height": 20,
+      "dimension": 2
+    },
+    {
+      "type": "Block",
+      "x": 1220,
+      "y": 285,
+      "width": 20,
+      "height": 120,
+      "dimension": 2
+    },
+    {
+      "type": "Block",
+      "x": 1290,
+      "y": 285,
+      "width": 20,
+      "height": 120,
+      "dimension": 1
+    },
+    {
+      "type": "Block",
+      "x": 1530,
+      "y": 385,
+      "width": 140,
+      "height": 20,
+      "dimension": 1
+    },
+    {
+      "type": "Goal",
+      "x": 1616,
+      "y": 325,
+      "width": 46,
+      "height": 60,
+      "dimension": 1
+    },
+    {
+      "type": "Block",
+      "x": 1338,
+      "y": 385,
+      "width": 120,
+      "height": 20,
+      "dimension": 2
+    },
+    {
+      "type": "InterBlock",
+      "x": -100,
+      "y": 70,
+      "width": 500,
+      "height": 20,
+      "dimension": 0
+    },
+    {
+      "type": "InterBlock",
+      "x": -100,
+      "y": -30,
+      "width": 20,
+      "height": 100,
+      "dimension": 0
+    },
+    {
+      "type": "InterBlock",
+      "x": 230,
+      "y": 30,
+      "width": 40,
+      "height": 40,
+      "dimension": 0
+    },
+    {
+      "type": "Text",
+      "x": 74,
+      "y": -104,
+      "width": 88,
+      "height": 55,
+      "dimension": 0,
+      "text": "Use R to respawn"
+    },
+    {
+      "type": "Text",
+      "x": 486,
+      "y": 52,
+      "width": 148,
+      "height": 55,
+      "dimension": 0,
+      "text": "Use SPACE to shift (Do it!)"
+    },
+    {
+      "type": "Text",
+      "x": 1425,
+      "y": 235,
+      "width": 152,
+      "height": 57,
+      "dimension": 0,
+      "text": "Don't worry it gets harder ; )"
+    }
+  ]
+}

@@ -1,0 +1,314 @@
+{
+  "level": 3,
+  "sourceFile": "RawLevel2",
+  "objects": [
+    {
+      "type": "DangerousBlock",
+      "x": 1520,
+      "y": 55,
+      "width": 80,
+      "height": 30,
+      "dimension": 1
+    },
+    {
+      "type": "SawBladeLeft",
+      "x": 2540,
+      "y": 290,
+      "width": 40,
+      "height": 40,
+      "dimension": 1
+    },
+    {
+      "type": "CheckPoint",
+      "x": 0,
+      "y": 20,
+      "width": 40,
+      "height": 60,
+      "dimension": 1
+    },
+    {
+      "type": "CheckPoint",
+      "x": 1751,
+      "y": 15,
+      "width": 40,
+      "height": 60,
+      "dimension": 1
+    },
+    {
+      "type": "Block",
+      "x": -60,
+      "y": 80,
+      "width": 200,
+      "height": 20,
+      "dimension": 1
+    },
+    {
+      "type": "FallingBlock",
+      "x": 220,
+      "y": 65,
+      "width": 100,
+      "height": 20,
+      "dimension": 1
+    },
+    {
+      "type": "Block",
+      "x": 400,
+      "y": 80,
+      "width": 200,
+      "height": 20,
+      "dimension": 1
+    },
+    {
+      "type": "FallingBlock",
+      "x": 660,
+      "y": 40,
+      "width": 100,
+      "height": 20,
+      "dimension": 1
+    },
+    {
+      "type": "FallingBlock",
+      "x": 830,
+      "y": 0,
+      "width": 100,
+      "height": 20,
+      "dimension": 1
+    },
+    {
+      "type": "FallingBlock",
+      "x": 1020,
+      "y": -40,
+      "width": 100,
+      "height": 20,
+      "dimension": 1
+    },
+    {
+      "type": "Block",
+      "x": 965,
+      "y": -110,
+      "width": 20,
+      "height": 120,
+      "dimension": 1
+    },
+    {
+      "type": "Block",
+      "x": 1300,
+      "y": -30,
+      "width": 200,
+      "height": 20,
+      "dimension": 1
+    },
+    {
+      "type": "Block",
+      "x": 785,
+      "y": -70,
+      "width": 20,
+      "height": 120,
+      "dimension": 1
+    },
+    {
+      "type": "Block",
+      "x": 1520,
+      "y": 75,
+      "width": 300,
+      "height": 20,
+      "dimension": 1
+    },
+    {
+      "type": "SawBladeUp",
+      "x": 1620,
+      "y": 20,
+      "width": 40,
+      "height": 140,
+      "dimension": 1
+    },
+    {
+      "type": "SawBladeDown",
+      "x": 1620,
+      "y": -120,
+      "width": 40,
+      "height": 140,
+      "dimension": 1
+    },
+    {
+      "type": "FallingBlock",
+      "x": 1895,
+      "y": 75,
+      "width": 80,
+      "height": 20,
+      "dimension": 1
+    },
+    {
+      "type": "SawBladeUp",
+      "x": 2080,
+      "y": 110,
+      "width": 40,
+      "height": 140,
+      "dimension": 1
+    },
+    {
+      "type": "SawBladeDown",
+      "x": 2080,
+      "y": -30,
+      "width": 40,
+      "height": 140,
+      "dimension": 2
+    },
+    {
+      "type": "SawBladeUp",
+      "x": 2120,
+      "y": 116,
+      "width": 40,
+      "height": 140,
+      "dimension": 2
+    },
+    {
+      "type": "SawBladeDown",
+      "x": 2120,
+      "y": -24,
+      "width": 40,
+      "height": 140,
+      "dimension": 1
+    },
+    {
+      "type": "SawBladeUp",
+      "x": 2120,
+      "y": 251,
+      "width": 40,
+      "height": 140,
+      "dimension": 1
+    },
+    {
+      "type": "SawBladeDown",
+      "x": 2120,
+      "y": 110,
+      "width": 40,
+      "height": 140,
+      "dimension": 2
+    },
+    {
+      "type": "SawBladeUp",
+      "x": 2080,
+      "y": 250,
+      "width": 40,
+      "height": 140,
+      "dimension": 2
+    },
+    {
+      "type": "SawBladeDown",
+      "x": 2080,
+      "y": 110,
+      "width": 40,
+      "height": 140,
+      "dimension": 1
+    },
+    {
+      "type": "SawBladeRight",
+      "x": 2060,
+      "y": 270,
+      "width": 80,
+      "height": 40,
+      "dimension": 1
+    },
+    {
+      "type": "SawBladeLeft",
+      "x": 2140,
+      "y": 270,
+      "width": 80,
+      "height": 40,
+      "dimension": 2
+    },
+    {
+      "type": "FallingBlock",
+      "x": 2070,
+      "y": 350,
+      "width": 120,
+      "height": 20,
+      "dimension": 1
+    },
+    {
+      "type": "FallingBlock",
+      "x": 2190,
+      "y": 290,
+      "width": 120,
+      "height": 20,
+      "dimension": 1
+    },
+    {
+      "type": "Block",
+      "x": 2362,
+      "y": 180,
+      "width": 20,
+      "height": 120,
+      "dimension": 1
+    },
+    {
+      "type": "Goal",
+      "x": 2690,
+      "y": 240,
+      "width": 46,
+      "height": 60,
+      "dimension": 1
+    },
+    {
+      "type": "DangerousBlock",
+      "x": 1896,
+      "y": 111,
+      "width": 80,
+      "height": 20,
+      "dimension": 2
+    },
+    {
+      "type": "DangerousBlock",
+      "x": 1895,
+      "y": 352,
+      "width": 80,
+      "height": 20,
+      "dimension": 1
+    },
+    {
+      "type": "Block",
+      "x": 2460,
+      "y": 300,
+      "width": 300,
+      "height": 20,
+      "dimension": 1
+    },
+    {
+      "type": "Text",
+      "x": 176,
+      "y": -83,
+      "width": 189,
+      "height": 27,
+      "dimension": 0,
+      "text": "Yellow blocks fall"
+    },
+    {
+      "type": "Text",
+      "x": 1429,
+      "y": -114,
+      "width": 145,
+      "height": 27,
+      "dimension": 0,
+      "text": "Dangerous &gt;&gt;"
+    },
+    {
+      "type": "Text",
+      "x": 1365,
+      "y": 57,
+      "width": 145,
+      "height": 27,
+      "dimension": 0,
+      "text": "Dangerous &gt;&gt;"
+    },
+    {
+      "type": "Text",
+      "x": 1905,
+      "y": -38,
+      "width": 63,
+      "height": 27,
+      "dimension": 0,
+      "text": "Down"
+    }
+  ]
+}

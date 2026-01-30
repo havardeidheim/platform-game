@@ -1,0 +1,247 @@
+{
+  "level": 9,
+  "sourceFile": "RawLevel8",
+  "objects": [
+    {
+      "type": "DangerousBlock",
+      "x": -1910,
+      "y": -375,
+      "width": 140,
+      "height": 340,
+      "dimension": 2
+    },
+    {
+      "type": "Block",
+      "x": -1790,
+      "y": -375,
+      "width": 20,
+      "height": 215,
+      "dimension": 1
+    },
+    {
+      "type": "DangerousBlock",
+      "x": -1163,
+      "y": -440,
+      "width": 100,
+      "height": 300,
+      "dimension": 2
+    },
+    {
+      "type": "DangerousBlock",
+      "x": -560,
+      "y": -460,
+      "width": 300,
+      "height": 300,
+      "dimension": 2
+    },
+    {
+      "type": "DangerousBlock",
+      "x": -100,
+      "y": -420,
+      "width": 100,
+      "height": 260,
+      "dimension": 2
+    },
+    {
+      "type": "CheckPoint",
+      "x": -15,
+      "y": -10,
+      "width": 40,
+      "height": 60,
+      "dimension": 1
+    },
+    {
+      "type": "Block",
+      "x": -40,
+      "y": 50,
+      "width": 200,
+      "height": 20,
+      "dimension": 1
+    },
+    {
+      "type": "SlidingBlock",
+      "x": 248,
+      "y": -234,
+      "width": 20,
+      "height": 260,
+      "dimension": 1
+    },
+    {
+      "type": "SawBladeLeft",
+      "x": 277,
+      "y": 33,
+      "width": 40,
+      "height": 40,
+      "dimension": 1
+    },
+    {
+      "type": "Block",
+      "x": -260,
+      "y": -200,
+      "width": 420,
+      "height": 40,
+      "dimension": 1
+    },
+    {
+      "type": "SlidingBlock",
+      "x": -60,
+      "y": -360,
+      "width": 20,
+      "height": 160,
+      "dimension": 1
+    },
+    {
+      "type": "SlidingBlock",
+      "x": -378,
+      "y": -355,
+      "width": 20,
+      "height": 160,
+      "dimension": 1
+    },
+    {
+      "type": "SawBladeDown",
+      "x": -369,
+      "y": -355,
+      "width": 40,
+      "height": 160,
+      "dimension": 1
+    },
+    {
+      "type": "SawBladeDown",
+      "x": -450,
+      "y": -355,
+      "width": 40,
+      "height": 40,
+      "dimension": 1
+    },
+    {
+      "type": "SlidingBlock",
+      "x": -430,
+      "y": -275,
+      "width": 20,
+      "height": 100,
+      "dimension": 1
+    },
+    {
+      "type": "FallingBlock",
+      "x": -663,
+      "y": -200,
+      "width": 60,
+      "height": 20,
+      "dimension": 2
+    },
+    {
+      "type": "CheckPoint",
+      "x": -890,
+      "y": -260,
+      "width": 40,
+      "height": 60,
+      "dimension": 1
+    },
+    {
+      "type": "Block",
+      "x": -912,
+      "y": -200,
+      "width": 80,
+      "height": 20,
+      "dimension": 1
+    },
+    {
+      "type": "SlidingBlock",
+      "x": -1092,
+      "y": -340,
+      "width": 20,
+      "height": 160,
+      "dimension": 1
+    },
+    {
+      "type": "DangerousBlock",
+      "x": -1163,
+      "y": -440,
+      "width": 25,
+      "height": 300,
+      "dimension": 1
+    },
+    {
+      "type": "UpLeftTrampoline",
+      "x": -1120,
+      "y": -50,
+      "width": 40,
+      "height": 40,
+      "dimension": 1
+    },
+    {
+      "type": "FallingBlock",
+      "x": -1259,
+      "y": -59,
+      "width": 80,
+      "height": 20,
+      "dimension": 1
+    },
+    {
+      "type": "Block",
+      "x": -1527,
+      "y": -59,
+      "width": 80,
+      "height": 20,
+      "dimension": 1
+    },
+    {
+      "type": "UpLeftTrampoline",
+      "x": -1419,
+      "y": -139,
+      "width": 40,
+      "height": 40,
+      "dimension": 2
+    },
+    {
+      "type": "SlidingBlock",
+      "x": -1573,
+      "y": -265,
+      "width": 20,
+      "height": 160,
+      "dimension": 2
+    },
+    {
+      "type": "DangerousBlock",
+      "x": -1565,
+      "y": -260,
+      "width": 20,
+      "height": 150,
+      "dimension": 2
+    },
+    {
+      "type": "Block",
+      "x": -1790,
+      "y": -110,
+      "width": 20,
+      "height": 75,
+      "dimension": 1
+    },
+    {
+      "type": "Goal",
+      "x": -1904,
+      "y": -115,
+      "width": 46,
+      "height": 60,
+      "dimension": 1
+    },
+    {
+      "type": "Block",
+      "x": -1910,
+      "y": -55,
+      "width": 120,
+      "height": 20,
+      "dimension": 1
+    },
+    {
+      "type": "Text",
+      "x": -38,
+      "y": -97,
+      "width": 246,
+      "height": 55,
+      "dimension": 0,
+      "text": "There is something about those Brown blocks"
+    }
+  ]
+}

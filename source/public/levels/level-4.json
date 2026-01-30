@@ -1,0 +1,247 @@
+{
+  "level": 4,
+  "sourceFile": "RawLevel3",
+  "objects": [
+    {
+      "type": "CheckPoint",
+      "x": -20,
+      "y": 8,
+      "width": 40,
+      "height": 60,
+      "dimension": 1
+    },
+    {
+      "type": "Goal",
+      "x": 343,
+      "y": -113,
+      "width": 46,
+      "height": 60,
+      "dimension": 1
+    },
+    {
+      "type": "CheckPoint",
+      "x": 1336,
+      "y": 90,
+      "width": 40,
+      "height": 60,
+      "dimension": 1
+    },
+    {
+      "type": "FallingBlock",
+      "x": 525,
+      "y": 181,
+      "width": 100,
+      "height": 20,
+      "dimension": 1
+    },
+    {
+      "type": "FallingBlock",
+      "x": 897,
+      "y": 190,
+      "width": 100,
+      "height": 20,
+      "dimension": 1
+    },
+    {
+      "type": "FallingBlock",
+      "x": 1036,
+      "y": 140,
+      "width": 100,
+      "height": 20,
+      "dimension": 1
+    },
+    {
+      "type": "SawBladeUp",
+      "x": 445,
+      "y": 221,
+      "width": 40,
+      "height": 120,
+      "dimension": 1
+    },
+    {
+      "type": "Block",
+      "x": -60,
+      "y": 68,
+      "width": 120,
+      "height": 20,
+      "dimension": 1
+    },
+    {
+      "type": "Block",
+      "x": 1295,
+      "y": 150,
+      "width": 100,
+      "height": 20,
+      "dimension": 1
+    },
+    {
+      "type": "Block",
+      "x": 345,
+      "y": 201,
+      "width": 100,
+      "height": 20,
+      "dimension": 1
+    },
+    {
+      "type": "HorizontalTrampoline",
+      "x": 755,
+      "y": 346,
+      "width": 100,
+      "height": 20,
+      "dimension": 1
+    },
+    {
+      "type": "FallingBlock",
+      "x": 890,
+      "y": 100,
+      "width": 80,
+      "height": 20,
+      "dimension": 1
+    },
+    {
+      "type": "HorizontalTrampoline",
+      "x": 690,
+      "y": 8,
+      "width": 80,
+      "height": 20,
+      "dimension": 1
+    },
+    {
+      "type": "VerticalTrampoline",
+      "x": 85,
+      "y": 165,
+      "width": 20,
+      "height": 40,
+      "dimension": 1
+    },
+    {
+      "type": "VerticalTrampoline",
+      "x": -135,
+      "y": 165,
+      "width": 20,
+      "height": 40,
+      "dimension": 1
+    },
+    {
+      "type": "VerticalTrampoline",
+      "x": 790,
+      "y": -263,
+      "width": 20,
+      "height": 80,
+      "dimension": 1
+    },
+    {
+      "type": "HorizontalTrampoline",
+      "x": 688,
+      "y": -132,
+      "width": 80,
+      "height": 20,
+      "dimension": 1
+    },
+    {
+      "type": "Block",
+      "x": 665,
+      "y": 50,
+      "width": 20,
+      "height": 120,
+      "dimension": 1
+    },
+    {
+      "type": "Block",
+      "x": 740,
+      "y": 90,
+      "width": 20,
+      "height": 120,
+      "dimension": 2
+    },
+    {
+      "type": "Block",
+      "x": 1216,
+      "y": 50,
+      "width": 20,
+      "height": 120,
+      "dimension": 1
+    },
+    {
+      "type": "SawBladeDown",
+      "x": 735,
+      "y": 230,
+      "width": 40,
+      "height": 130,
+      "dimension": 1
+    },
+    {
+      "type": "SawBladeUp",
+      "x": 735,
+      "y": 360,
+      "width": 40,
+      "height": 130,
+      "dimension": 2
+    },
+    {
+      "type": "FallingBlock",
+      "x": 790,
+      "y": 50,
+      "width": 80,
+      "height": 20,
+      "dimension": 2
+    },
+    {
+      "type": "Block",
+      "x": -135,
+      "y": 200,
+      "width": 240,
+      "height": 20,
+      "dimension": 1
+    },
+    {
+      "type": "Block",
+      "x": 271,
+      "y": -53,
+      "width": 200,
+      "height": 20,
+      "dimension": 1
+    },
+    {
+      "type": "DangerousBlock",
+      "x": 1145,
+      "y": 145,
+      "width": 60,
+      "height": 20,
+      "dimension": 1
+    },
+    {
+      "type": "DangerousBlock",
+      "x": 505,
+      "y": -310,
+      "width": 20,
+      "height": 240,
+      "dimension": 1
+    },
+    {
+      "type": "Block",
+      "x": -135,
+      "y": 155,
+      "width": 20,
+      "height": 10,
+      "dimension": 1
+    },
+    {
+      "type": "Block",
+      "x": 85,
+      "y": 155,
+      "width": 20,
+      "height": 10,
+      "dimension": 1
+    },
+    {
+      "type": "Text",
+      "x": 89,
+      "y": 70,
+      "width": 185,
+      "height": 55,
+      "dimension": 0,
+      "text": "Pink blocks make you bounce"
+    }
+  ]
+}
