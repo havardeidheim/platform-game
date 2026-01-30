@@ -35,28 +35,28 @@
       "dimension": 1
     },
     {
-      "type": "SawBladeUp",
+      "type": "VerticalSawBlade",
       "x": 304,
       "y": 355,
-      "width": 40,
-      "height": 40,
-      "dimension": 1
+      "dimension": 1,
+      "diameter": 40,
+      "range": -40
     },
     {
-      "type": "SawBladeUp",
+      "type": "VerticalSawBlade",
       "x": 400,
       "y": 355,
-      "width": 40,
-      "height": 85,
-      "dimension": 1
+      "dimension": 1,
+      "diameter": 40,
+      "range": -85
     },
     {
-      "type": "SawBladeDown",
+      "type": "VerticalSawBlade",
       "x": 400,
       "y": 185,
-      "width": 40,
-      "height": 85,
-      "dimension": 1
+      "dimension": 1,
+      "diameter": 40,
+      "range": 85
     },
     {
       "type": "Block",
@@ -123,12 +123,12 @@
       "dimension": 1
     },
     {
-      "type": "SawBladeUp",
+      "type": "VerticalSawBlade",
       "x": 890,
       "y": 355,
-      "width": 40,
-      "height": 200,
-      "dimension": 1
+      "dimension": 1,
+      "diameter": 40,
+      "range": -200
     },
     {
       "type": "VerticalTrampoline",
@@ -147,12 +147,12 @@
       "dimension": 1
     },
     {
-      "type": "SawBladeUp",
+      "type": "VerticalSawBlade",
       "x": 840,
       "y": 345,
-      "width": 40,
-      "height": 40,
-      "dimension": 1
+      "dimension": 1,
+      "diameter": 40,
+      "range": -40
     },
     {
       "type": "Block",

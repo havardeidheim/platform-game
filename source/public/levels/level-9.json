@@ -67,11 +67,11 @@
       "dimension": 1
     },
     {
-      "type": "SawBladeLeft",
+      "type": "HorizontalSawBlade",
       "x": 277,
       "y": 33,
-      "width": 40,
-      "height": 40,
+      "range": -40,
+      "diameter": 40,
       "dimension": 1
     },
     {
@@ -99,20 +99,20 @@
       "dimension": 1
     },
     {
-      "type": "SawBladeDown",
+      "type": "VerticalSawBlade",
       "x": -369,
       "y": -355,
-      "width": 40,
-      "height": 160,
-      "dimension": 1
+      "dimension": 1,
+      "diameter": 40,
+      "range": 160
     },
     {
-      "type": "SawBladeDown",
+      "type": "VerticalSawBlade",
       "x": -450,
       "y": -355,
-      "width": 40,
-      "height": 40,
-      "dimension": 1
+      "dimension": 1,
+      "diameter": 40,
+      "range": 40
     },
     {
       "type": "SlidingBlock",

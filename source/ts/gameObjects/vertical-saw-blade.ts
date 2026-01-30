@@ -2,15 +2,17 @@ import { GameObject } from './base/game-object.js';
 
 export class VerticalSawBlade extends GameObject {
     private radius: number = 0;
+    private range: number = 0;
     private dynamic: boolean = false;
     private path: number = 0;
     private progress: number = 0;
     private movingUp: boolean = false;
     private rotation: number = 0;
 
-    constructor(x: number = 0, y: number = 0, width: number = 0, height: number = 0, dimension: number = 0) {
-        super(x, y, width, height, dimension);
-        this.radius = this.width / 2;
+    constructor(x: number = 0, y: number = 0, diameter: number = 0, range: number = 0, dimension: number = 0) {
+        super(x, y, diameter, diameter, dimension);
+        this.radius = diameter / 2;
+        this.range = range;
     }
 
     render(ctx: CanvasRenderingContext2D): void {

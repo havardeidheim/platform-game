@@ -8,6 +8,8 @@ export interface LevelObjectData {
     height: number;
     dimension: number;
     text?: string;
+    diameter?: number;
+    range?: number;
 }
 
 export interface LevelData {

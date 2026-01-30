@@ -49,10 +49,15 @@ const typeMap: Record<string, new (...args: ConstructorParameters<typeof GameObj
     HorizontalSawBlade,
 };
 
+const sawBladeTypes = new Set(['HorizontalSawBlade', 'VerticalSawBlade']);
+
 function createGameObject(data: LevelObjectData): GameObject {
     const Ctor = typeMap[data.type];
     if (!Ctor) {
         throw new Error(`Unknown game object type: ${data.type}`);
+    }
+    if (sawBladeTypes.has(data.type)) {
+        return new Ctor(data.x, data.y, data.diameter!, data.range!, data.dimension);
     }
     return new Ctor(data.x, data.y, data.width, data.height, data.dimension);
 }

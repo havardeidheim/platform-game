@@ -123,11 +123,11 @@
       "dimension": 1
     },
     {
-      "type": "SawBladeLeft",
+      "type": "HorizontalSawBlade",
       "x": 1517,
       "y": -314,
-      "width": 311,
-      "height": 40,
+      "range": -311,
+      "diameter": 40,
       "dimension": 1
     },
     {

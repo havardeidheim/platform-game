@@ -51,12 +51,12 @@
       "dimension": 1
     },
     {
-      "type": "SawBladeUp",
+      "type": "VerticalSawBlade",
       "x": 445,
       "y": 221,
-      "width": 40,
-      "height": 120,
-      "dimension": 1
+      "dimension": 1,
+      "diameter": 40,
+      "range": -120
     },
     {
       "type": "Block",
@@ -163,20 +163,20 @@
       "dimension": 1
     },
     {
-      "type": "SawBladeDown",
+      "type": "VerticalSawBlade",
       "x": 735,
       "y": 230,
-      "width": 40,
-      "height": 130,
-      "dimension": 1
+      "dimension": 1,
+      "diameter": 40,
+      "range": 130
     },
     {
-      "type": "SawBladeUp",
+      "type": "VerticalSawBlade",
       "x": 735,
       "y": 360,
-      "width": 40,
-      "height": 130,
-      "dimension": 2
+      "dimension": 2,
+      "diameter": 40,
+      "range": -130
     },
     {
       "type": "FallingBlock",

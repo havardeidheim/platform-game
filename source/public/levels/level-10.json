@@ -131,52 +131,52 @@
       "dimension": 1
     },
     {
-      "type": "SawBladeDown",
+      "type": "VerticalSawBlade",
       "x": 1425,
       "y": -335,
-      "width": 40,
-      "height": 40,
-      "dimension": 1
+      "dimension": 1,
+      "diameter": 40,
+      "range": 40
     },
     {
-      "type": "SawBladeDown",
+      "type": "VerticalSawBlade",
       "x": 1288,
       "y": -369,
-      "width": 40,
-      "height": 40,
-      "dimension": 1
+      "dimension": 1,
+      "diameter": 40,
+      "range": 40
     },
     {
-      "type": "SawBladeDown",
+      "type": "VerticalSawBlade",
       "x": 1425,
       "y": -285,
-      "width": 40,
-      "height": 40,
-      "dimension": 1
+      "dimension": 1,
+      "diameter": 40,
+      "range": 40
     },
     {
-      "type": "SawBladeDown",
+      "type": "VerticalSawBlade",
       "x": 1425,
       "y": -435,
-      "width": 40,
-      "height": 40,
-      "dimension": 1
+      "dimension": 1,
+      "diameter": 40,
+      "range": 40
     },
     {
-      "type": "SawBladeDown",
+      "type": "VerticalSawBlade",
       "x": 1288,
       "y": -269,
-      "width": 40,
-      "height": 40,
-      "dimension": 1
+      "dimension": 1,
+      "diameter": 40,
+      "range": 40
     },
     {
-      "type": "SawBladeDown",
+      "type": "VerticalSawBlade",
       "x": 1425,
       "y": -185,
-      "width": 40,
-      "height": 40,
-      "dimension": 1
+      "dimension": 1,
+      "diameter": 40,
+      "range": 40
     },
     {
       "type": "SneakyBlock",

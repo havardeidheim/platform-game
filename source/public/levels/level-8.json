@@ -51,28 +51,28 @@
       "dimension": 1
     },
     {
-      "type": "SawBladeLeft",
+      "type": "HorizontalSawBlade",
       "x": 327,
       "y": 62,
-      "width": 40,
-      "height": 40,
+      "range": -40,
+      "diameter": 40,
       "dimension": 1
     },
     {
-      "type": "SawBladeDown",
+      "type": "VerticalSawBlade",
       "x": 693,
       "y": -27,
-      "width": 40,
-      "height": 200,
-      "dimension": 2
+      "dimension": 2,
+      "diameter": 40,
+      "range": 200
     },
     {
-      "type": "SawBladeDown",
+      "type": "VerticalSawBlade",
       "x": 744,
       "y": -107,
-      "width": 40,
-      "height": 300,
-      "dimension": 1
+      "dimension": 1,
+      "diameter": 40,
+      "range": 300
     },
     {
       "type": "UpRightTrampoline",
@@ -83,20 +83,20 @@
       "dimension": 1
     },
     {
-      "type": "SawBladeUp",
+      "type": "VerticalSawBlade",
       "x": 711,
       "y": 254,
-      "width": 60,
-      "height": 300,
-      "dimension": 2
+      "dimension": 2,
+      "diameter": 60,
+      "range": -300
     },
     {
-      "type": "SawBladeDown",
+      "type": "VerticalSawBlade",
       "x": 711,
       "y": -49,
-      "width": 60,
-      "height": 300,
-      "dimension": 1
+      "dimension": 1,
+      "diameter": 60,
+      "range": 300
     },
     {
       "type": "UpLeftTrampoline",
@@ -131,20 +131,20 @@
       "dimension": 1
     },
     {
-      "type": "SawBladeDown",
+      "type": "VerticalSawBlade",
       "x": 1226,
       "y": -262,
-      "width": 40,
-      "height": 240,
-      "dimension": 1
+      "dimension": 1,
+      "diameter": 40,
+      "range": 240
     },
     {
-      "type": "SawBladeUp",
+      "type": "VerticalSawBlade",
       "x": 1226,
       "y": -22,
-      "width": 40,
-      "height": 240,
-      "dimension": 1
+      "dimension": 1,
+      "diameter": 40,
+      "range": -240
     },
     {
       "type": "FallingBlock",
@@ -171,11 +171,11 @@
       "dimension": 2
     },
     {
-      "type": "SawBladeLeft",
+      "type": "HorizontalSawBlade",
       "x": 1826,
       "y": -51,
-      "width": 40,
-      "height": 40,
+      "range": -40,
+      "diameter": 40,
       "dimension": 2
     },
     {
@@ -195,19 +195,19 @@
       "dimension": 2
     },
     {
-      "type": "SawBladeLeft",
+      "type": "HorizontalSawBlade",
       "x": 2054,
       "y": -121,
-      "width": 40,
-      "height": 40,
+      "range": -40,
+      "diameter": 40,
       "dimension": 2
     },
     {
-      "type": "SawBladeLeft",
+      "type": "HorizontalSawBlade",
       "x": 2054,
       "y": -86,
-      "width": 40,
-      "height": 40,
+      "range": -40,
+      "diameter": 40,
       "dimension": 2
     },
     {
@@ -219,27 +219,27 @@
       "dimension": 1
     },
     {
-      "type": "SawBladeLeft",
+      "type": "HorizontalSawBlade",
       "x": 1801,
       "y": -204,
-      "width": 40,
-      "height": 40,
+      "range": -40,
+      "diameter": 40,
       "dimension": 1
     },
     {
-      "type": "SawBladeLeft",
+      "type": "HorizontalSawBlade",
       "x": 1968,
       "y": -237,
-      "width": 40,
-      "height": 40,
+      "range": -40,
+      "diameter": 40,
       "dimension": 2
     },
     {
-      "type": "SawBladeLeft",
+      "type": "HorizontalSawBlade",
       "x": 1968,
       "y": -202,
-      "width": 40,
-      "height": 40,
+      "range": -40,
+      "diameter": 40,
       "dimension": 2
     },
     {

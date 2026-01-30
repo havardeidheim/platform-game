@@ -27,36 +27,36 @@
       "dimension": 1
     },
     {
-      "type": "SawBladeRight",
+      "type": "HorizontalSawBlade",
       "x": 202,
       "y": 67,
-      "width": 120,
-      "height": 40,
+      "range": 120,
+      "diameter": 40,
       "dimension": 1
     },
     {
-      "type": "SawBladeDown",
+      "type": "VerticalSawBlade",
       "x": 224,
       "y": -73,
-      "width": 40,
-      "height": 120,
-      "dimension": 1
+      "dimension": 1,
+      "diameter": 40,
+      "range": 120
     },
     {
-      "type": "SawBladeLeft",
+      "type": "HorizontalSawBlade",
       "x": 542,
       "y": 66,
-      "width": 120,
-      "height": 40,
+      "range": -120,
+      "diameter": 40,
       "dimension": 1
     },
     {
-      "type": "SawBladeDown",
+      "type": "VerticalSawBlade",
       "x": 522,
       "y": -73,
-      "width": 40,
-      "height": 120,
-      "dimension": 1
+      "dimension": 1,
+      "diameter": 40,
+      "range": 120
     },
     {
       "type": "VerticalTrampoline",
@@ -75,19 +75,19 @@
       "dimension": 1
     },
     {
-      "type": "SawBladeUp",
+      "type": "VerticalSawBlade",
       "x": 769,
       "y": 52,
-      "width": 40,
-      "height": 94,
-      "dimension": 1
+      "dimension": 1,
+      "diameter": 40,
+      "range": -94
     },
     {
-      "type": "SawBladeLeft",
+      "type": "HorizontalSawBlade",
       "x": 789,
       "y": 66,
-      "width": 94,
-      "height": 40,
+      "range": -94,
+      "diameter": 40,
       "dimension": 1
     },
     {
@@ -267,12 +267,12 @@
       "dimension": 1
     },
     {
-      "type": "SawBladeDown",
+      "type": "VerticalSawBlade",
       "x": 2230,
       "y": -294,
-      "width": 40,
-      "height": 120,
-      "dimension": 1
+      "dimension": 1,
+      "diameter": 40,
+      "range": 120
     },
     {
       "type": "Goal",
@@ -291,11 +291,11 @@
       "dimension": 1
     },
     {
-      "type": "SawBladeRight",
+      "type": "HorizontalSawBlade",
       "x": 2015,
       "y": -117,
-      "width": 800,
-      "height": 40,
+      "range": 800,
+      "diameter": 40,
       "dimension": 1
     },
     {
