@@ -1,11 +1,6 @@
-import { GameObject } from './base/game-object.js';
-import { Rectangle } from './base/geometry.js';
+import { GameObject } from './game-object.js';
 
-export class DownSpike extends GameObject {
-    getBounds(): Rectangle {
-        return new Rectangle(this.x + 2, this.y, this.width - 4, this.height - 5);
-    }
-
+export class UpLeftTrampoline extends GameObject {
     render(ctx: CanvasRenderingContext2D): void {
         ctx.fillStyle = 'white';
         ctx.fillRect(this.x, this.y, this.width, this.height);

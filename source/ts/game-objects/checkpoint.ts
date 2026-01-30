@@ -1,6 +1,8 @@
-import { GameObject } from './base/game-object.js';
+import { GameObject } from './game-object.js';
 
-export class LeftPlatform extends GameObject {
+export class CheckPoint extends GameObject {
+    active: boolean = false;
+
     render(ctx: CanvasRenderingContext2D): void {
         ctx.fillStyle = 'white';
         ctx.fillRect(this.x, this.y, this.width, this.height);

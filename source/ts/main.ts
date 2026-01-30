@@ -1,5 +1,5 @@
 import { Game } from './game.js';
-import { Level } from './gameObjects/base/level.js';
+import { Level } from './levels/level.js';
 
 const canvas = document.getElementById('gameCanvas') as HTMLCanvasElement;
 const ctx = canvas.getContext('2d')!;

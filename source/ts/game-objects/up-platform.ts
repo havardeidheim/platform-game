@@ -1,6 +1,11 @@
-import { GameObject } from './base/game-object.js';
+import { GameObject } from './game-object.js';
 
-export class SneakyBlock extends GameObject {
+export class UpPlatform extends GameObject {
+    private canFall: boolean = false;
+    private falling: boolean = false;
+    private ySpeed: number = 0;
+    private started: boolean = false;
+
     render(ctx: CanvasRenderingContext2D): void {
         ctx.fillStyle = 'white';
         ctx.fillRect(this.x, this.y, this.width, this.height);
@@ -10,7 +15,7 @@ export class SneakyBlock extends GameObject {
     }
 
     update(dt: number): void {
-        // static block, no update needed
+        // TODO: handle fall timing and gravity if canFall
     }
 
     hitTest(other: GameObject): boolean {

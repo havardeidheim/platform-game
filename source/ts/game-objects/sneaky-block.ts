@@ -1,6 +1,6 @@
-import { GameObject } from './base/game-object.js';
+import { GameObject } from './game-object.js';
 
-export class Goal extends GameObject {
+export class SneakyBlock extends GameObject {
     render(ctx: CanvasRenderingContext2D): void {
         ctx.fillStyle = 'white';
         ctx.fillRect(this.x, this.y, this.width, this.height);
@@ -10,7 +10,7 @@ export class Goal extends GameObject {
     }
 
     update(dt: number): void {
-        // no update needed
+        // static block, no update needed
     }
 
     hitTest(other: GameObject): boolean {

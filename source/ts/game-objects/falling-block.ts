@@ -1,6 +1,12 @@
-import { GameObject } from './base/game-object.js';
+import { GameObject } from './game-object.js';
 
-export class BouncingBlock extends GameObject {
+export class FallingBlock extends GameObject {
+    private falling: boolean = false;
+    private ySpeed: number = 0;
+    private started: boolean = false;
+    private fallTimer: number = 0;
+    private respawnTimer: number = 0;
+
     render(ctx: CanvasRenderingContext2D): void {
         ctx.fillStyle = 'white';
         ctx.fillRect(this.x, this.y, this.width, this.height);
@@ -10,7 +16,7 @@ export class BouncingBlock extends GameObject {
     }
 
     update(dt: number): void {
-        // static block, no update needed
+        // TODO: handle fall timing and gravity
     }
 
     hitTest(other: GameObject): boolean {

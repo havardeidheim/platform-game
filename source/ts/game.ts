@@ -1,4 +1,4 @@
-import { Level } from './gameObjects/base/level.js';
+import { Level } from './levels/level.js';
 
 export class Game {
     level: Level;
@@ -71,10 +71,16 @@ export class Game {
         }
     }
 
-    private render(): void {
+    private renderBackground(): void {
         const { ctx } = this;
-        ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
+        ctx.fillStyle = 'slategray';
+        ctx.fillRect(0, 0, ctx.canvas.width, ctx.canvas.height);
+    }
 
+    private render(): void {
+        this.renderBackground();
+
+        const { ctx } = this;
         const passiveDimension = this.currentDimension === 1 ? 2 : 1;
 
         // 1. Passive dimension (background)

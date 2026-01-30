@@ -1,4 +1,4 @@
-import { GameObject } from './base/game-object.js';
+import { GameObject } from './game-object.js';
 
 export class Text extends GameObject {
     text: string;

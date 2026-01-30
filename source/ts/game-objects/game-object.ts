@@ -1,22 +1,4 @@
-import { Rectangle } from './geometry.js';
-
-export interface LevelObjectData {
-    type: string;
-    x: number;
-    y: number;
-    width: number;
-    height: number;
-    dimension: number;
-    text?: string;
-    diameter?: number;
-    range?: number;
-}
-
-export interface LevelData {
-    level: number;
-    sourceFile: string;
-    objects: LevelObjectData[];
-}
+import { Rectangle } from '../utils/geometry.js';
 
 export abstract class GameObject {
     x: number;

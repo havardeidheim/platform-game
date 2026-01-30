@@ -1,6 +1,6 @@
-import { GameObject } from './base/game-object.js';
+import { GameObject } from './game-object.js';
 
-export class SlidingBlock extends GameObject {
+export class UpRightTrampoline extends GameObject {
     render(ctx: CanvasRenderingContext2D): void {
         ctx.fillStyle = 'white';
         ctx.fillRect(this.x, this.y, this.width, this.height);
@@ -10,7 +10,7 @@ export class SlidingBlock extends GameObject {
     }
 
     update(dt: number): void {
-        // static block, no update needed
+        // no update needed
     }
 
     hitTest(other: GameObject): boolean {

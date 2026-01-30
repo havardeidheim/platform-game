@@ -1,11 +1,10 @@
-import { GameObject } from './base/game-object.js';
+import { GameObject } from './game-object.js';
+import { Rectangle } from '../utils/geometry.js';
 
-export class FallingBlock extends GameObject {
-    private falling: boolean = false;
-    private ySpeed: number = 0;
-    private started: boolean = false;
-    private fallTimer: number = 0;
-    private respawnTimer: number = 0;
+export class DownSpike extends GameObject {
+    getBounds(): Rectangle {
+        return new Rectangle(this.x + 2, this.y, this.width - 4, this.height - 5);
+    }
 
     render(ctx: CanvasRenderingContext2D): void {
         ctx.fillStyle = 'white';
@@ -16,7 +15,7 @@ export class FallingBlock extends GameObject {
     }
 
     update(dt: number): void {
-        // TODO: handle fall timing and gravity
+        // no update needed
     }
 
     hitTest(other: GameObject): boolean {

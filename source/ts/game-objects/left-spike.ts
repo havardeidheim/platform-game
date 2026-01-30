@@ -1,6 +1,11 @@
-import { GameObject } from './base/game-object.js';
+import { GameObject } from './game-object.js';
+import { Rectangle } from '../utils/geometry.js';
 
-export class UpRightTrampoline extends GameObject {
+export class LeftSpike extends GameObject {
+    getBounds(): Rectangle {
+        return new Rectangle(this.x + 5, this.y + 2, this.width - 5, this.height - 4);
+    }
+
     render(ctx: CanvasRenderingContext2D): void {
         ctx.fillStyle = 'white';
         ctx.fillRect(this.x, this.y, this.width, this.height);

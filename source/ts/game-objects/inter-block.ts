@@ -1,11 +1,6 @@
-import { GameObject } from './base/game-object.js';
-import { Rectangle } from './base/geometry.js';
+import { GameObject } from './game-object.js';
 
-export class LeftSpike extends GameObject {
-    getBounds(): Rectangle {
-        return new Rectangle(this.x + 5, this.y + 2, this.width - 5, this.height - 4);
-    }
-
+export class InterBlock extends GameObject {
     render(ctx: CanvasRenderingContext2D): void {
         ctx.fillStyle = 'white';
         ctx.fillRect(this.x, this.y, this.width, this.height);
@@ -15,7 +10,7 @@ export class LeftSpike extends GameObject {
     }
 
     update(dt: number): void {
-        // no update needed
+        // static block, no update needed
     }
 
     hitTest(other: GameObject): boolean {
