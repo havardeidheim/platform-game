@@ -75,7 +75,7 @@
       "dimension": 1
     },
     {
-      "type": "DangerousBlock",
+      "type": "DangerousArea",
       "x": 685,
       "y": -468,
       "width": 60,
@@ -83,7 +83,7 @@
       "dimension": 1
     },
     {
-      "type": "DangerousBlock",
+      "type": "DangerousArea",
       "x": 835,
       "y": -330,
       "width": 80,

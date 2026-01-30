@@ -3,7 +3,7 @@
   "sourceFile": "RawLevel6",
   "objects": [
     {
-      "type": "DangerousBlock",
+      "type": "DangerousArea",
       "x": 122,
       "y": -93,
       "width": 740,
@@ -227,7 +227,7 @@
       "dimension": 1
     },
     {
-      "type": "DangerousBlock",
+      "type": "DangerousArea",
       "x": 1697,
       "y": -247,
       "width": 30,
@@ -283,7 +283,7 @@
       "dimension": 1
     },
     {
-      "type": "DangerousBlock",
+      "type": "DangerousArea",
       "x": 2062,
       "y": 7,
       "width": 20,

@@ -7,7 +7,11 @@ export class DownSpike extends GameObject {
     }
 
     render(ctx: CanvasRenderingContext2D): void {
-        // TODO
+        ctx.fillStyle = 'white';
+        ctx.fillRect(this.x, this.y, this.width, this.height);
+        ctx.strokeStyle = 'magenta';
+        ctx.lineWidth = 2;
+        ctx.strokeRect(this.x, this.y, this.width, this.height);
     }
 
     update(dt: number): void {

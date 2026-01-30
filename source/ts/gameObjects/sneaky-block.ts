@@ -2,7 +2,11 @@ import { GameObject } from './base/game-object.js';
 
 export class SneakyBlock extends GameObject {
     render(ctx: CanvasRenderingContext2D): void {
-        // TODO: renders with reduced opacity when in active dimension
+        ctx.fillStyle = 'white';
+        ctx.fillRect(this.x, this.y, this.width, this.height);
+        ctx.strokeStyle = 'magenta';
+        ctx.lineWidth = 2;
+        ctx.strokeRect(this.x, this.y, this.width, this.height);
     }
 
     update(dt: number): void {

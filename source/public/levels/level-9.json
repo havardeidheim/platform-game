@@ -3,7 +3,7 @@
   "sourceFile": "RawLevel8",
   "objects": [
     {
-      "type": "DangerousBlock",
+      "type": "DangerousArea",
       "x": -1910,
       "y": -375,
       "width": 140,
@@ -19,7 +19,7 @@
       "dimension": 1
     },
     {
-      "type": "DangerousBlock",
+      "type": "DangerousArea",
       "x": -1163,
       "y": -440,
       "width": 100,
@@ -27,7 +27,7 @@
       "dimension": 2
     },
     {
-      "type": "DangerousBlock",
+      "type": "DangerousArea",
       "x": -560,
       "y": -460,
       "width": 300,
@@ -35,7 +35,7 @@
       "dimension": 2
     },
     {
-      "type": "DangerousBlock",
+      "type": "DangerousArea",
       "x": -100,
       "y": -420,
       "width": 100,
@@ -155,7 +155,7 @@
       "dimension": 1
     },
     {
-      "type": "DangerousBlock",
+      "type": "DangerousArea",
       "x": -1163,
       "y": -440,
       "width": 25,
@@ -203,7 +203,7 @@
       "dimension": 2
     },
     {
-      "type": "DangerousBlock",
+      "type": "DangerousArea",
       "x": -1565,
       "y": -260,
       "width": 20,

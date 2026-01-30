@@ -14,11 +14,41 @@ export class HorizontalSawBlade extends GameObject {
     }
 
     render(ctx: CanvasRenderingContext2D): void {
-        // TODO
+        const cx = this.x + this.width / 2;
+        const cy = this.y + this.height / 2;
+        const r = this.width / 2;
+        const spikeHeight = 3;
+        const numSpikes = 12;
+
+        ctx.save();
+        ctx.translate(cx, cy);
+        ctx.rotate(this.rotation);
+
+        ctx.beginPath();
+        for (let i = 0; i < numSpikes * 2; i++) {
+            const angle = (i / (numSpikes * 2)) * Math.PI * 2;
+            const dist = i % 2 === 0 ? r + spikeHeight : r - spikeHeight;
+            const px = Math.cos(angle) * dist;
+            const py = Math.sin(angle) * dist;
+            if (i === 0) {
+                ctx.moveTo(px, py);
+            } else {
+                ctx.lineTo(px, py);
+            }
+        }
+        ctx.closePath();
+
+        ctx.fillStyle = 'white';
+        ctx.fill();
+        ctx.strokeStyle = 'magenta';
+        ctx.lineWidth = 2;
+        ctx.stroke();
+
+        ctx.restore();
     }
 
     update(dt: number): void {
-        // TODO: rotation and horizontal movement
+        this.rotation += 2 * dt;
     }
 
     hitTest(other: GameObject): boolean {
