@@ -9,6 +9,8 @@ export abstract class GameObject {
     width: number;
     height: number;
     dimension: number;
+    protected startX: number;
+    protected startY: number;
 
     constructor(x: number = 0, y: number = 0, width: number = 0, height: number = 0, dimension: number = 0) {
         this.x = x;
@@ -16,6 +18,13 @@ export abstract class GameObject {
         this.width = width;
         this.height = height;
         this.dimension = dimension;
+        this.startX = x;
+        this.startY = y;
+    }
+
+    reset(): void {
+        this.x = this.startX;
+        this.y = this.startY;
     }
 
     getBounds(): Rectangle {

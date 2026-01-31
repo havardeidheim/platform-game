@@ -6,7 +6,8 @@ const ctx = canvas.getContext('2d')!;
 
 async function init() {
     // const level = await Level.load('./levels/level-1.json');
-    const level = await Level.load('./levels/level-7.json');
+    // const level = await Level.load('./levels/level-7.json');
+    const level = await Level.load('./levels/level-3.json');
     const game = new Game(level, ctx);
     game.start();
 }

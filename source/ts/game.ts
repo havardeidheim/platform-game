@@ -56,6 +56,10 @@ export class Game {
     reset(): void {
         this.currentDimension = DIMENSION_1;
 
+        for (const obj of this.level.objects) {
+            obj.reset();
+        }
+
         if (this.checkpoint) {
             this.player.startX = this.checkpoint.x + this.player.width/2;
             this.player.startY = this.checkpoint.y + this.player.width/2;

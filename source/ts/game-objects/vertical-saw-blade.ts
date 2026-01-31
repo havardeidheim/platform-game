@@ -10,6 +10,7 @@ export class VerticalSawBlade extends GameObject {
     private dynamic: boolean = false;
     private progress: number = 0;
     private movingUp: boolean = false;
+    private readonly initialMovingUp: boolean;
     private rotation: number = 0;
 
     constructor(x: number = 0, y: number = 0, diameter: number = 0, range: number = 0, dimension: number = 0) {
@@ -18,6 +19,14 @@ export class VerticalSawBlade extends GameObject {
         this.range = range;
         this.dynamic = range !== 0;
         this.movingUp = range < 0;
+        this.initialMovingUp = this.movingUp;
+    }
+
+    override reset(): void {
+        super.reset();
+        this.progress = 0;
+        this.movingUp = this.initialMovingUp;
+        this.rotation = 0;
     }
 
     render(ctx: CanvasRenderingContext2D): void {
