@@ -1,6 +1,7 @@
 import { GameObject } from './game-object.js';
 import { COLOR_FILL, COLOR_STROKE } from '../utils/colors.js';
 import type { Player } from './player.js';
+import type { Game } from '../game.js';
 
 export class RightPlatform extends GameObject {
     render(ctx: CanvasRenderingContext2D): void {

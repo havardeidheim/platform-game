@@ -1,6 +1,7 @@
 import { GameObject } from './game-object.js';
 import { COLOR_FILL, COLOR_FALLING_BLOCK } from '../utils/colors.js';
 import type { Player } from './player.js';
+import type { Game } from '../game.js';
 
 export class FallingBlock extends GameObject {
     private falling: boolean = false;

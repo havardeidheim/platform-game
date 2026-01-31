@@ -1,6 +1,7 @@
 import { GameObject } from './game-object.js';
 import { COLOR_FILL, COLOR_DANGER_RED } from '../utils/colors.js';
 import type { Player } from './player.js';
+import type { Game } from '../game.js';
 
 export class HorizontalSawBlade extends GameObject {
     private radius: number = 0;

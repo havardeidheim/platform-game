@@ -2,6 +2,7 @@ import { Level } from './levels/level.js';
 import { Player } from './game-objects/player.js';
 import { CheckPoint } from './game-objects/checkpoint.js';
 import { GameKeyboardControls } from './game-keyboard-controls.js';
+import { Point } from './utils/geometry.js';
 
 export class Game {
     level: Level;
@@ -128,7 +129,25 @@ export class Game {
         // 4. Player (after all other objects)
         this.player.update(dt, this.player, this);
 
-        // 5. Update camera to follow player
+        // 5. Collision detection and response
+        let collided = false;
+        const normal = new Point(0, 0);
+
+        for (const obj of this.level.objects) {
+            if (obj.dimension === this.currentDimension || obj.dimension === 0) {
+                normal.x = 0;
+                normal.y = 0;
+                if (obj.resolvePlayerCollision(this.player, normal)) {
+                    this.player.collide(normal);
+                    collided = true;
+                }
+            }
+        }
+        if (!collided) {
+            this.player.noCollision();
+        }
+
+        // 6. Update camera to follow player
         this.centerStage();
     }
 

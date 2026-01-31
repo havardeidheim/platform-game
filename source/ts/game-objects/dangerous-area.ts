@@ -2,6 +2,7 @@ import { GameObject } from './game-object.js';
 import { COLOR_DANGER_RED } from '../utils/colors.js';
 import { LINE_WIDTH } from '../utils/constants.js';
 import type { Player } from './player.js';
+import type { Game } from '../game.js';
 
 export class DangerousArea extends GameObject {
     render(ctx: CanvasRenderingContext2D): void {

@@ -2,6 +2,7 @@ import { GameObject } from './game-object.js';
 import { COLOR_TEXT_BACKGROUND, COLOR_TEXT_STROKE } from '../utils/colors.js';
 import { DIMENSION_STATIC } from '../utils/constants.js';
 import type { Player } from './player.js';
+import type { Game } from '../game.js';
 
 const CORNER_RADIUS = 5;
 const FONT_SIZE = 20;

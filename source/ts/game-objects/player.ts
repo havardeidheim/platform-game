@@ -1,6 +1,7 @@
 import { GameObject } from './game-object.js';
-import { Point } from '../utils/geometry.js';
+import { Point, Rectangle } from '../utils/geometry.js';
 import { GameKeyboardControls } from '../game-keyboard-controls.js';
+import type { Game } from '../game.js';
 import {
     X_MAX_SPEED, Y_MAX_SPEED,
     X_ACCELERATION, Y_ACCELERATION,
@@ -93,8 +94,8 @@ export class Player extends GameObject {
         return this.getBounds().intersects(other.getBounds());
     }
 
-    getLastBounds() {
-        return { x: this.lastPosition.x, y: this.lastPosition.y, width: this.width, height: this.height };
+    getLastBounds(): Rectangle {
+        return new Rectangle(this.lastPosition.x, this.lastPosition.y, this.width, this.height);
     }
 
     private jump(): void {
