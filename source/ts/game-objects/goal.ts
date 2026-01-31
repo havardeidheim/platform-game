@@ -1,5 +1,6 @@
 import { GameObject } from './game-object.js';
 import { COLOR_FILL, COLOR_GOAL } from '../utils/colors.js';
+import type { Player } from './player.js';
 
 export class Goal extends GameObject {
     render(ctx: CanvasRenderingContext2D): void {
@@ -25,7 +26,7 @@ export class Goal extends GameObject {
         ctx.stroke();
     }
 
-    update(dt: number): void {
+    update(dt: number, player: Player, game: Game): void {
         // no update needed
     }
 

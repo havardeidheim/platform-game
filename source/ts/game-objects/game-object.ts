@@ -1,5 +1,7 @@
 import { Rectangle } from '../utils/geometry.js';
 import { COLOR_FILL, COLOR_STROKE } from '../utils/colors.js';
+import type { Player } from './player.js';
+import type { Game } from '../game.js';
 
 export abstract class GameObject {
     x: number;
@@ -27,6 +29,6 @@ export abstract class GameObject {
         ctx.lineWidth = 3;
         ctx.strokeRect(this.x + 1.5, this.y + 1.5, this.width - 3, this.height - 3);
     }
-    abstract update(dt: number): void;
+    abstract update(dt: number, player: Player, game: Game): void;
     abstract hitTest(other: GameObject): boolean;
 }

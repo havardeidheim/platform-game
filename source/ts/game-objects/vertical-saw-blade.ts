@@ -1,5 +1,6 @@
 import { GameObject } from './game-object.js';
 import { COLOR_FILL, COLOR_DANGER_RED } from '../utils/colors.js';
+import type { Player } from './player.js';
 
 export class VerticalSawBlade extends GameObject {
     private radius: number = 0;
@@ -50,7 +51,7 @@ export class VerticalSawBlade extends GameObject {
         ctx.restore();
     }
 
-    update(dt: number): void {
+    update(dt: number, player: Player, game: Game): void {
         this.rotation += 2 * dt;
     }
 

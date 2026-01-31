@@ -1,6 +1,7 @@
 import { GameObject } from './game-object.js';
 import { COLOR_FILL, COLOR_INTER_BLOCK } from '../utils/colors.js';
 import { DIMENSION_STATIC } from '../utils/constants.js';
+import type { Player } from './player.js';
 
 export class InterBlock extends GameObject {
     constructor(x: number = 0, y: number = 0, width: number = 0, height: number = 0, _dimension: number = 0) {
@@ -15,7 +16,7 @@ export class InterBlock extends GameObject {
         ctx.strokeRect(this.x + 1.5, this.y + 1.5, this.width - 3, this.height - 3);
     }
 
-    update(dt: number): void {
+    update(dt: number, player: Player, game: Game): void {
         // static block, no update needed
     }
 

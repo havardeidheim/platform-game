@@ -1,5 +1,7 @@
 import { GameObject } from './game-object.js';
+import { Player } from './player.js';
 import { COLOR_FILL, COLOR_CHECKPOINT } from '../utils/colors.js';
+import { Game } from '../game.js';
 
 export class CheckPoint extends GameObject {
     active: boolean = false;
@@ -27,8 +29,10 @@ export class CheckPoint extends GameObject {
         ctx.stroke();
     }
 
-    update(dt: number): void {
-        // no update needed
+    update(dt: number, player: Player, game: Game): void {
+        if (this.hitTest(player)) {
+            game.setCheckpoint(this);
+        }
     }
 
     hitTest(other: GameObject): boolean {

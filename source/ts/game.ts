@@ -1,5 +1,6 @@
 import { Level } from './levels/level.js';
 import { Player } from './game-objects/player.js';
+import { CheckPoint } from './game-objects/checkpoint.js';
 import { PlayerKeyboardControl } from './player-keyboard-control.js';
 
 export class Game {
@@ -13,6 +14,8 @@ export class Game {
     private frameInterval: number = 1000 / 60;
     private accumulated: number = 0;
     private ctx: CanvasRenderingContext2D;
+
+    private checkpoint: CheckPoint | null = null;
 
     // Camera state
     private cameraX: number = 0;
@@ -43,6 +46,36 @@ export class Game {
         this.controls.destroy();
     }
 
+    reset(): void {
+        this.currentDimension = 1;
+
+        if (this.checkpoint) {
+            this.player.startX = this.checkpoint.x + 10;
+            this.player.startY = this.checkpoint.y + 10;
+        }
+
+        this.player.respawn();
+        this.respawnCamera = true;
+    }
+
+    win(): void {
+        this.pause();
+    }
+
+    setCheckpoint(checkpoint: CheckPoint): void {
+        if(this.checkpoint){
+            this.checkpoint.active = false;
+        }
+        this.checkpoint = checkpoint;
+        checkpoint.active = true;
+    }
+
+    setActiveDimension(dimension: number): void {
+        if (dimension === 1 || dimension === 2) {
+            this.currentDimension = dimension;
+        }
+    }
+
     private loop(time: number): void {
         if (this.running) {
             this.animationFrameId = requestAnimationFrame((t) => this.loop(t));
@@ -66,8 +99,7 @@ export class Game {
     private update(dt: number): void {
         // Handle respawn
         if (this.controls.hasRespawned()) {
-            this.player.respawn();
-            this.respawnCamera = true;
+            this.reset();
         }
 
         const passiveDimension = this.currentDimension === 1 ? 2 : 1;
@@ -75,26 +107,26 @@ export class Game {
         // 1. Passive dimension (background)
         for (const obj of this.level.objects) {
             if (obj.dimension === passiveDimension) {
-                obj.update(dt);
+                obj.update(dt, this.player, this);
             }
         }
 
         // 2. Active dimension
         for (const obj of this.level.objects) {
             if (obj.dimension === this.currentDimension) {
-                obj.update(dt);
+                obj.update(dt, this.player, this);
             }
         }
 
         // 3. Static dimension (always on top)
         for (const obj of this.level.objects) {
             if (obj.dimension === 0) {
-                obj.update(dt);
+                obj.update(dt, this.player, this);
             }
         }
 
         // 4. Player (after all other objects)
-        this.player.update(dt);
+        this.player.update(dt, this.player, this);
 
         // 5. Update camera to follow player
         this.centerStage();

@@ -1,6 +1,7 @@
 import { GameObject } from './game-object.js';
 import { COLOR_DANGER_RED } from '../utils/colors.js';
 import { LINE_WIDTH } from '../utils/constants.js';
+import type { Player } from './player.js';
 
 export class DangerousArea extends GameObject {
     render(ctx: CanvasRenderingContext2D): void {
@@ -28,7 +29,7 @@ export class DangerousArea extends GameObject {
         ctx.restore();
     }
 
-    update(dt: number): void {
+    update(dt: number, player: Player, game: Game): void {
         // no update needed
     }
 

@@ -1,6 +1,7 @@
 import { GameObject } from './game-object.js';
 import { COLOR_TEXT_BACKGROUND, COLOR_TEXT_STROKE } from '../utils/colors.js';
 import { DIMENSION_STATIC } from '../utils/constants.js';
+import type { Player } from './player.js';
 
 const CORNER_RADIUS = 5;
 const FONT_SIZE = 20;
@@ -48,7 +49,7 @@ export class Text extends GameObject {
         }
     }
 
-    update(dt: number): void {
+    update(dt: number, player: Player, game: Game): void {
         // no update needed
     }
 

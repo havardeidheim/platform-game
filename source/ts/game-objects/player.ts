@@ -31,7 +31,7 @@ export class Player extends GameObject {
         this.controls = controls;
     }
 
-    update(dt: number): void {
+    update(dt: number, player: Player, game: Game): void {
         // Jump (one-shot)
         if (this.controls.hasJumped()) {
             this.jump();

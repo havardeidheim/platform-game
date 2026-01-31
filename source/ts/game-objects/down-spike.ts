@@ -1,6 +1,7 @@
 import { GameObject } from './game-object.js';
 import { Rectangle } from '../utils/geometry.js';
 import { COLOR_FILL, COLOR_STROKE } from '../utils/colors.js';
+import type { Player } from './player.js';
 
 export class DownSpike extends GameObject {
     getBounds(): Rectangle {
@@ -15,7 +16,7 @@ export class DownSpike extends GameObject {
         ctx.strokeRect(this.x + 1.5, this.y + 1.5, this.width - 3, this.height - 3);
     }
 
-    update(dt: number): void {
+    update(dt: number, player: Player, game: Game): void {
         // no update needed
     }
 
