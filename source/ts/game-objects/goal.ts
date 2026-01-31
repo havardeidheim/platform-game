@@ -28,7 +28,9 @@ export class Goal extends GameObject {
     }
 
     update(dt: number, player: Player, game: Game): void {
-        // no update needed
+        if (this.hitTest(player)) {
+            game.win();
+        }
     }
 
     hitTest(other: GameObject): boolean {
