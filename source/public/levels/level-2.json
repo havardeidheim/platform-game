@@ -151,7 +151,7 @@
       "x": 74,
       "y": -104,
       "width": 88,
-      "height": 55,
+      "height": 27,
       "dimension": 0,
       "text": "Use R to respawn"
     },
@@ -160,7 +160,7 @@
       "x": 486,
       "y": 52,
       "width": 148,
-      "height": 55,
+      "height": 27,
       "dimension": 0,
       "text": "Use SPACE to shift (Do it!)"
     },
@@ -169,7 +169,7 @@
       "x": 1425,
       "y": 235,
       "width": 152,
-      "height": 57,
+      "height": 27,
       "dimension": 0,
       "text": "Don't worry it gets harder ; )"
     }
