@@ -8,7 +8,6 @@ export class VerticalSawBlade extends GameObject {
     private radius: number = 0;
     private range: number = 0;
     private dynamic: boolean = false;
-    private path: number = 0;
     private progress: number = 0;
     private movingUp: boolean = false;
     private rotation: number = 0;
@@ -17,6 +16,8 @@ export class VerticalSawBlade extends GameObject {
         super(x, y, diameter, diameter, dimension);
         this.radius = diameter / 2;
         this.range = range;
+        this.dynamic = range !== 0;
+        this.movingUp = range < 0;
     }
 
     render(ctx: CanvasRenderingContext2D): void {
@@ -55,6 +56,15 @@ export class VerticalSawBlade extends GameObject {
 
     update(dt: number, player: Player, game: Game): void {
         this.rotation += 2 * dt;
+
+        if (this.dynamic) {
+            if (this.progress >= Math.abs(this.range)) {
+                this.movingUp = !this.movingUp;
+                this.progress = 0;
+            }
+            this.progress++;
+            this.y += this.movingUp ? -1 : 1;
+        }
     }
 
     resolvePlayerCollision(player: Player, normal: Point, game: Game): boolean {

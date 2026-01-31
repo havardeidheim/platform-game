@@ -8,7 +8,6 @@ export class HorizontalSawBlade extends GameObject {
     private radius: number = 0;
     private range: number = 0;
     private dynamic: boolean = false;
-    private path: number = 0;
     private progress: number = 0;
     private movingRight: boolean = false;
     private rotation: number = 0;
@@ -17,6 +16,8 @@ export class HorizontalSawBlade extends GameObject {
         super(x, y, diameter, diameter, dimension);
         this.radius = diameter / 2;
         this.range = range;
+        this.dynamic = range !== 0;
+        this.movingRight = range > 0;
     }
 
     render(ctx: CanvasRenderingContext2D): void {
@@ -55,6 +56,15 @@ export class HorizontalSawBlade extends GameObject {
 
     update(dt: number, player: Player, game: Game): void {
         this.rotation += 2 * dt;
+
+        if (this.dynamic) {
+            if (this.progress >= Math.abs(this.range)) {
+                this.movingRight = !this.movingRight;
+                this.progress = 0;
+            }
+            this.progress++;
+            this.x += this.movingRight ? 1 : -1;
+        }
     }
 
     resolvePlayerCollision(player: Player, normal: Point, game: Game): boolean {

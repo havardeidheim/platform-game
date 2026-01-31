@@ -164,6 +164,8 @@ export class Player extends GameObject {
     respawn(): void {
         this.x = this.startX;
         this.y = this.startY;
+        this.lastPosition.x = this.startX;
+        this.lastPosition.y = this.startY;
         this.vx = 0;
         this.vy = 0;
         this.falling = true;
