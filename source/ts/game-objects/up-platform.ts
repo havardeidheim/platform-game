@@ -21,7 +21,4 @@ export class UpPlatform extends GameObject {
         // TODO: handle fall timing and gravity if canFall
     }
 
-    hitTest(other: GameObject): boolean {
-        return this.getBounds().intersects(other.getBounds());
-    }
 }

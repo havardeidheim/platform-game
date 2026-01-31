@@ -22,7 +22,4 @@ export class FallingBlock extends GameObject {
         // TODO: handle fall timing and gravity
     }
 
-    hitTest(other: GameObject): boolean {
-        return this.getBounds().intersects(other.getBounds());
-    }
 }

@@ -90,10 +90,6 @@ export class Player extends GameObject {
         ctx.strokeRect(this.x + 1.5, this.y + 1.5, this.width - 3, this.height - 3);
     }
 
-    hitTest(other: GameObject): boolean {
-        return this.getBounds().intersects(other.getBounds());
-    }
-
     getLastBounds(): Rectangle {
         return new Rectangle(this.lastPosition.x, this.lastPosition.y, this.width, this.height);
     }

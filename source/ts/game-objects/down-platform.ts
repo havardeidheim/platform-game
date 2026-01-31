@@ -16,7 +16,4 @@ export class DownPlatform extends GameObject {
         // no update needed
     }
 
-    hitTest(other: GameObject): boolean {
-        return this.getBounds().intersects(other.getBounds());
-    }
 }

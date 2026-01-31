@@ -31,12 +31,8 @@ export class Goal extends GameObject {
     update(dt: number, player: Player, game: Game): void {
     }
 
-    hitTest(other: GameObject): boolean {
-        return this.getBounds().intersects(other.getBounds());
-    }
-
     resolvePlayerCollision(player: Player, normal: Point, game: Game): boolean {
-        if (this.hitTest(player)) {
+        if (this.getBounds().intersects(player.getBounds())) {
             game.win();
         }
         return false;

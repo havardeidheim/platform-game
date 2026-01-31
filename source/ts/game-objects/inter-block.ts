@@ -21,7 +21,4 @@ export class InterBlock extends GameObject {
         // static block, no update needed
     }
 
-    hitTest(other: GameObject): boolean {
-        return this.getBounds().intersects(other.getBounds());
-    }
 }

@@ -1,5 +1,6 @@
 import { GameObject } from './game-object.js';
 import { COLOR_FILL, COLOR_DANGER_RED } from '../utils/colors.js';
+import { Point } from '../utils/geometry.js';
 import type { Player } from './player.js';
 import type { Game } from '../game.js';
 
@@ -56,12 +57,17 @@ export class VerticalSawBlade extends GameObject {
         this.rotation += 2 * dt;
     }
 
-    hitTest(other: GameObject): boolean {
-        const bounds = other.getBounds();
-        const closestX = Math.max(bounds.left, Math.min(this.x, bounds.right));
-        const closestY = Math.max(bounds.top, Math.min(this.y, bounds.bottom));
-        const dx = this.x - closestX;
-        const dy = this.y - closestY;
-        return Math.sqrt(dx * dx + dy * dy) < this.radius;
+    resolvePlayerCollision(player: Player, normal: Point, game: Game): boolean {
+        const cx = this.x + this.radius;
+        const cy = this.y + this.radius;
+        const bounds = player.getBounds();
+        const closestX = Math.max(bounds.left, Math.min(cx, bounds.right));
+        const closestY = Math.max(bounds.top, Math.min(cy, bounds.bottom));
+        const dx = cx - closestX;
+        const dy = cy - closestY;
+        if (Math.sqrt(dx * dx + dy * dy) < this.radius) {
+            game.reset();
+        }
+        return false;
     }
 }

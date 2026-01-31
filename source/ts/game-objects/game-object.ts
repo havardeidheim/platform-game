@@ -30,7 +30,6 @@ export abstract class GameObject {
         ctx.strokeRect(this.x + 1.5, this.y + 1.5, this.width - 3, this.height - 3);
     }
     abstract update(dt: number, player: Player, game: Game): void;
-    abstract hitTest(other: GameObject): boolean;
 
     resolvePlayerCollision(player: Player, normal: Point, game: Game): boolean {
         const b = this.getBounds();

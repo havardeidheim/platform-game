@@ -55,10 +55,6 @@ export class TextBlock extends GameObject {
         // no update needed
     }
 
-    hitTest(_other: GameObject): boolean {
-        return false;
-    }
-
     resolvePlayerCollision(_player: Player, _normal: Point, _game: Game): boolean {
         return false;
     }

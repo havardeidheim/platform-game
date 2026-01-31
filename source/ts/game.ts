@@ -119,6 +119,13 @@ export class Game {
             this.reset();
         }
 
+        // Handle dimension switch
+        if (this.controls.hasSwitchedDimension()) {
+            this.setActiveDimension(
+                this.currentDimension === DIMENSION_1 ? DIMENSION_2 : DIMENSION_1
+            );
+        }
+
         // 1. Update all objects (animation, movement — dimension-independent)
         for (const obj of this.level.objects) {
             obj.update(dt, this.player, this);
@@ -192,12 +199,14 @@ export class Game {
         ctx.save();
         ctx.translate(-this.cameraX, -this.cameraY);
 
-        // 1. Passive dimension (background)
+        // 1. Passive dimension (background, reduced opacity)
+        ctx.globalAlpha = 0.35;
         for (const obj of this.level.objects) {
             if (obj.dimension === passiveDimension) {
                 obj.render(ctx);
             }
         }
+        ctx.globalAlpha = 1;
 
         // 2. Active dimension
         for (const obj of this.level.objects) {

@@ -1,6 +1,7 @@
 import { GameObject } from './game-object.js';
 import { COLOR_DANGER_RED } from '../utils/colors.js';
 import { LINE_WIDTH } from '../utils/constants.js';
+import { Point } from '../utils/geometry.js';
 import type { Player } from './player.js';
 import type { Game } from '../game.js';
 
@@ -34,7 +35,10 @@ export class DangerousArea extends GameObject {
         // no update needed
     }
 
-    hitTest(other: GameObject): boolean {
-        return this.getBounds().intersects(other.getBounds());
+    resolvePlayerCollision(player: Player, normal: Point, game: Game): boolean {
+        if (this.getBounds().intersects(player.getBounds())) {
+            game.reset();
+        }
+        return false;
     }
 }
