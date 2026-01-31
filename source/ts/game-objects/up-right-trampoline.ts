@@ -6,8 +6,8 @@ export class UpRightTrampoline extends GameObject {
         ctx.fillStyle = COLOR_FILL;
         ctx.fillRect(this.x, this.y, this.width, this.height);
         ctx.strokeStyle = COLOR_STROKE;
-        ctx.lineWidth = 2;
-        ctx.strokeRect(this.x, this.y, this.width, this.height);
+        ctx.lineWidth = 3;
+        ctx.strokeRect(this.x + 1.5, this.y + 1.5, this.width - 3, this.height - 3);
     }
 
     update(dt: number): void {

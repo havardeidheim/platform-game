@@ -19,7 +19,7 @@ export class VerticalSawBlade extends GameObject {
     render(ctx: CanvasRenderingContext2D): void {
         const cx = this.x + this.width / 2;
         const cy = this.y + this.height / 2;
-        const r = this.width / 2;
+        const r = this.width / 2 - 1.5;
         const spikeHeight = 2;
         const numSpikes = 16;
 
@@ -44,7 +44,7 @@ export class VerticalSawBlade extends GameObject {
         ctx.fillStyle = COLOR_FILL;
         ctx.fill();
         ctx.strokeStyle = COLOR_DANGER_RED;
-        ctx.lineWidth = 2;
+        ctx.lineWidth = 3;
         ctx.stroke();
 
         ctx.restore();
