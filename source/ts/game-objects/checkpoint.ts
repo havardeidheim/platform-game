@@ -1,5 +1,6 @@
 import { GameObject } from './game-object.js';
 import { Player } from './player.js';
+import { Point } from '../utils/geometry.js';
 import { COLOR_FILL, COLOR_CHECKPOINT } from '../utils/colors.js';
 import { Game } from '../game.js';
 
@@ -30,12 +31,16 @@ export class CheckPoint extends GameObject {
     }
 
     update(dt: number, player: Player, game: Game): void {
-        if (this.hitTest(player)) {
-            game.setCheckpoint(this);
-        }
     }
 
     hitTest(other: GameObject): boolean {
         return this.getBounds().intersects(other.getBounds());
+    }
+
+    resolvePlayerCollision(player: Player, normal: Point, game: Game): boolean {
+        if (this.hitTest(player)) {
+            game.setCheckpoint(this);
+        }
+        return false;
     }
 }

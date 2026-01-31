@@ -118,33 +118,15 @@ export class Game {
             this.reset();
         }
 
-        const passiveDimension = this.currentDimension === 1 ? 2 : 1;
-
-        // 1. Passive dimension (background)
+        // 1. Update all objects (animation, movement — dimension-independent)
         for (const obj of this.level.objects) {
-            if (obj.dimension === passiveDimension) {
-                obj.update(dt, this.player, this);
-            }
+            obj.update(dt, this.player, this);
         }
 
-        // 2. Active dimension
-        for (const obj of this.level.objects) {
-            if (obj.dimension === this.currentDimension) {
-                obj.update(dt, this.player, this);
-            }
-        }
-
-        // 3. Static dimension (always on top)
-        for (const obj of this.level.objects) {
-            if (obj.dimension === 0) {
-                obj.update(dt, this.player, this);
-            }
-        }
-
-        // 4. Player (after all other objects)
+        // 2. Update player
         this.player.update(dt, this.player, this);
 
-        // 5. Collision detection and response
+        // 3. Resolve collisions (only active dimension + static)
         let collided = false;
         const normal = new Point(0, 0);
 
@@ -152,7 +134,7 @@ export class Game {
             if (obj.dimension === this.currentDimension || obj.dimension === 0) {
                 normal.x = 0;
                 normal.y = 0;
-                if (obj.resolvePlayerCollision(this.player, normal)) {
+                if (obj.resolvePlayerCollision(this.player, normal, this)) {
                     this.player.collide(normal);
                     collided = true;
                 }
@@ -162,7 +144,7 @@ export class Game {
             this.player.noCollision();
         }
 
-        // 6. Update camera to follow player
+        // 4. Update camera to follow player
         this.centerStage();
     }
 

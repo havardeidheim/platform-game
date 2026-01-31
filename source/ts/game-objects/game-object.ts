@@ -32,7 +32,7 @@ export abstract class GameObject {
     abstract update(dt: number, player: Player, game: Game): void;
     abstract hitTest(other: GameObject): boolean;
 
-    resolvePlayerCollision(player: Player, normal: Point): boolean {
+    resolvePlayerCollision(player: Player, normal: Point, game: Game): boolean {
         const b = this.getBounds();
         const bounds = player.getBounds();
         const lastBounds = player.getLastBounds();

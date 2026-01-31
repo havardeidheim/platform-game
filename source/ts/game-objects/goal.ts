@@ -1,5 +1,6 @@
 import { GameObject } from './game-object.js';
 import { COLOR_FILL, COLOR_GOAL } from '../utils/colors.js';
+import { Point } from '../utils/geometry.js';
 import type { Player } from './player.js';
 import type { Game } from '../game.js';
 
@@ -28,12 +29,16 @@ export class Goal extends GameObject {
     }
 
     update(dt: number, player: Player, game: Game): void {
-        if (this.hitTest(player)) {
-            game.win();
-        }
     }
 
     hitTest(other: GameObject): boolean {
         return this.getBounds().intersects(other.getBounds());
+    }
+
+    resolvePlayerCollision(player: Player, normal: Point, game: Game): boolean {
+        if (this.hitTest(player)) {
+            game.win();
+        }
+        return false;
     }
 }
