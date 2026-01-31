@@ -22,7 +22,7 @@ export abstract class GameObject {
         return new Rectangle(this.x, this.y, this.width, this.height);
     }
 
-    render(ctx: CanvasRenderingContext2D): void {
+    render(ctx: CanvasRenderingContext2D, game: Game): void {
         ctx.fillStyle = COLOR_FILL;
         ctx.fillRect(this.x, this.y, this.width, this.height);
         ctx.strokeStyle = COLOR_STROKE;

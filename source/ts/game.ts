@@ -3,7 +3,7 @@ import { Player } from './game-objects/player.js';
 import { CheckPoint } from './game-objects/checkpoint.js';
 import { GameKeyboardControls } from './game-keyboard-controls.js';
 import { Point } from './utils/geometry.js';
-import { DIMENSION_STATIC, DIMENSION_1, DIMENSION_2 } from './utils/constants.js';
+import { DIMENSION_STATIC, DIMENSION_1, DIMENSION_2, DIMENSION_INACTIVE_ALPHA } from './utils/constants.js';
 
 export class Game {
     level: Level;
@@ -200,10 +200,10 @@ export class Game {
         ctx.translate(-this.cameraX, -this.cameraY);
 
         // 1. Passive dimension (background, reduced opacity)
-        ctx.globalAlpha = 0.35;
+        ctx.globalAlpha = DIMENSION_INACTIVE_ALPHA;
         for (const obj of this.level.objects) {
             if (obj.dimension === passiveDimension) {
-                obj.render(ctx);
+                obj.render(ctx, this);
             }
         }
         ctx.globalAlpha = 1;
@@ -211,14 +211,14 @@ export class Game {
         // 2. Active dimension
         for (const obj of this.level.objects) {
             if (obj.dimension === this.currentDimension) {
-                obj.render(ctx);
+                obj.render(ctx, this);
             }
         }
 
         // 3. Static dimension (always on top)
         for (const obj of this.level.objects) {
             if (obj.dimension === DIMENSION_STATIC) {
-                obj.render(ctx);
+                obj.render(ctx, this);
             }
         }
 

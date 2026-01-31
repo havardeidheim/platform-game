@@ -9,6 +9,7 @@ export const LINE_WIDTH = 2;
 export const DIMENSION_STATIC = 0;
 export const DIMENSION_1 = 1;
 export const DIMENSION_2 = 2;
+export const DIMENSION_INACTIVE_ALPHA = 0.35;
 
 // Player physics (from original Co.as)
 export const X_MAX_SPEED = 4;
