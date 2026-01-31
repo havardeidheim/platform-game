@@ -27,7 +27,7 @@ import { BouncingBlockRot } from '../game-objects/bouncing-block-rot.js';
 import { CheckPoint } from '../game-objects/checkpoint.js';
 import { Goal } from '../game-objects/goal.js';
 import { DangerousArea } from '../game-objects/dangerous-area.js';
-import { Text } from '../game-objects/text.js';
+import { TextBlock } from '../game-objects/text.js';
 import { UpSpike } from '../game-objects/up-spike.js';
 import { DownSpike } from '../game-objects/down-spike.js';
 import { LeftSpike } from '../game-objects/left-spike.js';
@@ -52,7 +52,7 @@ const typeMap: Record<string, new (...args: any[]) => GameObject> = {
     CheckPoint,
     Goal,
     DangerousArea,
-    Text,
+    TextBlock,
     UpSpike,
     DownSpike,
     LeftSpike,
@@ -77,8 +77,8 @@ function createGameObject(data: LevelObjectData): GameObject {
     if (sawBladeTypes.has(data.type)) {
         return new Ctor(data.x, data.y, data.diameter!, data.range!, data.dimension);
     }
-    if (data.type === 'Text') {
-        return new Text(data.x, data.y, data.width, data.height, data.text ?? '');
+    if (data.type === 'TextBlock') {
+        return new TextBlock(data.x, data.y, data.width, data.height, data.text ?? '');
     }
     return new Ctor(data.x, data.y, data.width, data.height, data.dimension);
 }

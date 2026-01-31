@@ -147,7 +147,7 @@
       "dimension": 0
     },
     {
-      "type": "Text",
+      "type": "TextBlock",
       "x": 74,
       "y": -104,
       "width": 88,
@@ -156,7 +156,7 @@
       "text": "Use R to respawn"
     },
     {
-      "type": "Text",
+      "type": "TextBlock",
       "x": 486,
       "y": 52,
       "width": 148,
@@ -165,7 +165,7 @@
       "text": "Use SPACE to shift (Do it!)"
     },
     {
-      "type": "Text",
+      "type": "TextBlock",
       "x": 1425,
       "y": 235,
       "width": 152,

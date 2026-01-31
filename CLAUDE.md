@@ -14,8 +14,11 @@ The folder `original-flash-game\PlatformGame\source` contains the source of the 
 
 The game is written in typescript and use a simple html wrapper. The build is handled using vite and scss is used for styling.
 
-### Building the game
-Use `npm run build` to build the game and `npm run dev` to run a dev server. `build` will also build html and scss using vite.
+### Building and typechecking
+Always use the npm scripts defined in package.json:
+- `npm run build` - typecheck and build for production
+- `npm run typecheck` - typecheck only (no emit)
+- `npm run dev` - typecheck and start dev server
 
 ## How the game works
 

@@ -1,6 +1,7 @@
 import { GameObject } from './game-object.js';
 import { COLOR_TEXT_BACKGROUND, COLOR_TEXT_STROKE } from '../utils/colors.js';
 import { DIMENSION_STATIC } from '../utils/constants.js';
+import { Point } from '../utils/geometry.js';
 import type { Player } from './player.js';
 import type { Game } from '../game.js';
 
@@ -8,7 +9,7 @@ const CORNER_RADIUS = 5;
 const FONT_SIZE = 20;
 const PADDING = 10;
 
-export class Text extends GameObject {
+export class TextBlock extends GameObject {
     text: string;
 
     constructor(x: number = 0, y: number = 0, width: number = 0, height: number = 0, text: string = '') {
@@ -55,6 +56,10 @@ export class Text extends GameObject {
     }
 
     hitTest(_other: GameObject): boolean {
+        return false;
+    }
+
+    resolvePlayerCollision(_player: Player, _normal: Point, _game: Game): boolean {
         return false;
     }
 }

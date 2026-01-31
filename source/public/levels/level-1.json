@@ -51,7 +51,7 @@
       "dimension": 0
     },
     {
-      "type": "Text",
+      "type": "TextBlock",
       "x": 72,
       "y": -58,
       "width": 109,
@@ -60,7 +60,7 @@
       "text": "Use A and D to move "
     },
     {
-      "type": "Text",
+      "type": "TextBlock",
       "x": 362,
       "y": -58,
       "width": 100,
@@ -69,7 +69,7 @@
       "text": "Use W to jump"
     },
     {
-      "type": "Text",
+      "type": "TextBlock",
       "x": -191,
       "y": 27,
       "width": 158,
@@ -78,7 +78,7 @@
       "text": "CheckPoint >>"
     },
     {
-      "type": "Text",
+      "type": "TextBlock",
       "x": 586,
       "y": 27,
       "width": 100,

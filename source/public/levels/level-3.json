@@ -275,7 +275,7 @@
       "dimension": 1
     },
     {
-      "type": "Text",
+      "type": "TextBlock",
       "x": 176,
       "y": -83,
       "width": 189,
@@ -284,7 +284,7 @@
       "text": "Yellow blocks fall"
     },
     {
-      "type": "Text",
+      "type": "TextBlock",
       "x": 1429,
       "y": -114,
       "width": 145,
@@ -293,7 +293,7 @@
       "text": "Dangerous >>"
     },
     {
-      "type": "Text",
+      "type": "TextBlock",
       "x": 1365,
       "y": 57,
       "width": 145,
@@ -302,7 +302,7 @@
       "text": "Dangerous >>"
     },
     {
-      "type": "Text",
+      "type": "TextBlock",
       "x": 1905,
       "y": -38,
       "width": 63,

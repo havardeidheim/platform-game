@@ -235,7 +235,7 @@
       "dimension": 1
     },
     {
-      "type": "Text",
+      "type": "TextBlock",
       "x": 89,
       "y": 70,
       "width": 185,

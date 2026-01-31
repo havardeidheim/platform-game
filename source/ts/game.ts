@@ -3,11 +3,12 @@ import { Player } from './game-objects/player.js';
 import { CheckPoint } from './game-objects/checkpoint.js';
 import { GameKeyboardControls } from './game-keyboard-controls.js';
 import { Point } from './utils/geometry.js';
+import { DIMENSION_STATIC, DIMENSION_1, DIMENSION_2 } from './utils/constants.js';
 
 export class Game {
     level: Level;
     running: boolean = false;
-    currentDimension: number = 1;
+    currentDimension: number = DIMENSION_1;
     player: Player;
     private controls: GameKeyboardControls;
     private animationFrameId: number = 0;
@@ -53,7 +54,7 @@ export class Game {
     }
 
     reset(): void {
-        this.currentDimension = 1;
+        this.currentDimension = DIMENSION_1;
 
         if (this.checkpoint) {
             this.player.startX = this.checkpoint.x + this.player.width/2;
@@ -77,7 +78,7 @@ export class Game {
     }
 
     setActiveDimension(dimension: number): void {
-        if (dimension === 1 || dimension === 2) {
+        if (dimension === DIMENSION_1 || dimension === DIMENSION_2) {
             this.currentDimension = dimension;
         }
     }
@@ -131,7 +132,7 @@ export class Game {
         const normal = new Point(0, 0);
 
         for (const obj of this.level.objects) {
-            if (obj.dimension === this.currentDimension || obj.dimension === 0) {
+            if (obj.dimension === this.currentDimension || obj.dimension === DIMENSION_STATIC) {
                 normal.x = 0;
                 normal.y = 0;
                 if (obj.resolvePlayerCollision(this.player, normal, this)) {
@@ -185,7 +186,7 @@ export class Game {
         this.renderBackground();
 
         const { ctx } = this;
-        const passiveDimension = this.currentDimension === 1 ? 2 : 1;
+        const passiveDimension = this.currentDimension === DIMENSION_1 ? DIMENSION_2 : DIMENSION_1;
 
         // Apply camera offset — all world objects shift by the camera position
         ctx.save();
@@ -207,7 +208,7 @@ export class Game {
 
         // 3. Static dimension (always on top)
         for (const obj of this.level.objects) {
-            if (obj.dimension === 0) {
+            if (obj.dimension === DIMENSION_STATIC) {
                 obj.render(ctx);
             }
         }
