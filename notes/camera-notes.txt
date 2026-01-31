@@ -1,0 +1,61 @@
+Camera Behavior (Original Flash/AS3 Game)
+==========================================
+
+All camera logic is in Game.as, specifically the centerStage() method.
+
+
+X-axis (horizontal)
+--------------------
+The player is always centered. Every frame, all objects are shifted so the
+player sits at stageWidth / 2.
+
+
+Y-axis (vertical)
+-----------------
+Uses a dead zone system with three behaviors:
+
+  Upper bound:  Above stageHeight/3 + 50px
+                Camera scrolls down to keep player at that line.
+
+  Dead zone:    Between stageHeight/3 + 50px and stageHeight * 2/3
+                No camera movement — player moves freely.
+
+  Lower bound:  Below stageHeight * 2/3
+                Camera scrolls up to keep player at that line.
+
+There is also a special case: on first spawn or respawn, the player is
+centered vertically at stageHeight / 2 (middle of screen).
+
+
+Key code from centerStage()
+---------------------------
+
+  // X: always centered
+  changex = (stage.stageWidth / 2) - player.x;
+  player.x = stage.stageWidth / 2;
+
+  // Y: dead zone between 1/3 and 2/3 of screen
+  if (firstspawn || respawn) {
+      changey = (stage.stageHeight / 2) - player.y;
+      player.y = stage.stageHeight / 2;
+  }
+  else if (player.y > (stage.stageHeight / 3) * 2) {
+      changey = ((stage.stageHeight / 3) * 2) - player.y;
+      player.y = ((stage.stageHeight / 3) * 2);
+  }
+  else if (player.y < (stage.stageHeight / 3) * 1 + 50) {
+      changey = ((stage.stageHeight / 3) * 1) + 50 - player.y;
+      player.y = ((stage.stageHeight / 3) * 1) + 50;
+  }
+
+The deltas (changex, changey) are then applied to all game objects in both
+dimensions via objt.move(changex, changey), which shifts their x, y, startX,
+and startY.
+
+
+Summary
+-------
+The camera is not a simple center-follow. It is horizontally locked to center
+but vertically uses a dead zone spanning the middle third of the screen (with
+a 50px offset on the upper bound). This gives the player vertical breathing
+room while always keeping horizontal awareness centered.

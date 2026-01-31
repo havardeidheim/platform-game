@@ -1,9 +1,13 @@
 import { Level } from './levels/level.js';
+import { Player } from './game-objects/player.js';
+import { PlayerKeyboardControl } from './player-keyboard-control.js';
 
 export class Game {
     level: Level;
     running: boolean = false;
     currentDimension: number = 1;
+    player: Player;
+    private controls: PlayerKeyboardControl;
     private animationFrameId: number = 0;
     private lastTime: number = 0;
     private frameInterval: number = 1000 / 60;
@@ -13,6 +17,8 @@ export class Game {
     constructor(level: Level, ctx: CanvasRenderingContext2D) {
         this.level = level;
         this.ctx = ctx;
+        this.controls = new PlayerKeyboardControl();
+        this.player = new Player(0, 0, this.controls);
     }
 
     start(): void {
@@ -24,6 +30,11 @@ export class Game {
     pause(): void {
         this.running = false;
         cancelAnimationFrame(this.animationFrameId);
+    }
+
+    destroy(): void {
+        this.pause();
+        this.controls.destroy();
     }
 
     private loop(time: number): void {
@@ -69,6 +80,9 @@ export class Game {
                 obj.update(dt);
             }
         }
+
+        // 4. Player (after all other objects)
+        this.player.update(dt);
     }
 
     private renderBackground(): void {
@@ -103,5 +117,8 @@ export class Game {
                 obj.render(ctx);
             }
         }
+
+        // 4. Player (always on top of everything)
+        this.player.render(ctx);
     }
 }

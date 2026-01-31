@@ -29,6 +29,6 @@ The game has a main game loop where logic in run and objects are rendered. each 
 Levels are stores as json in `source\public\levels` and consists of a collection of game objects and placements.
 
 
-## Game architecture
+## Folder structure
 
-Different parts of the game logic is included with multiple .js files, use nativ browser js modules
+Source files are located in `source`, ts fles are located in `source\ts`
