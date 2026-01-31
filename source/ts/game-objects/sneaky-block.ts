@@ -1,7 +1,6 @@
 import { GameObject } from './game-object.js';
 import { COLOR_FILL, COLOR_STROKE } from '../utils/colors.js';
 import { DIMENSION_INACTIVE_ALPHA } from '../utils/constants.js';
-import type { Player } from './player.js';
 import { Game } from '../game.js';
 
 export class SneakyBlock extends GameObject {
@@ -17,10 +16,6 @@ export class SneakyBlock extends GameObject {
         ctx.strokeRect(this.x + 1.5, this.y + 1.5, this.width - 3, this.height - 3);
 
         ctx.globalAlpha = savedAlpha;
-    }
-
-    update(dt: number, player: Player, game: Game): void {
-        // static block, no update needed
     }
 
 }

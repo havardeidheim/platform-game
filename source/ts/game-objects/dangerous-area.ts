@@ -31,10 +31,6 @@ export class DangerousArea extends GameObject {
         ctx.restore();
     }
 
-    update(dt: number, player: Player, game: Game): void {
-        // no update needed
-    }
-
     resolvePlayerCollision(player: Player, normal: Point, game: Game): boolean {
         if (this.getBounds().intersects(player.getBounds())) {
             game.reset();

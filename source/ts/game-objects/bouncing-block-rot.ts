@@ -30,10 +30,6 @@ export class BouncingBlockRot extends GameObject {
         ctx.stroke();
     }
 
-    update(dt: number, player: Player, game: Game): void {
-        // static block, no update needed
-    }
-
     resolvePlayerCollision(player: Player, normal: Point, game: Game): boolean {
         const b = this.getBounds();
         const bounds = player.getBounds();

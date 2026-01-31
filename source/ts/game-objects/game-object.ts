@@ -38,7 +38,9 @@ export abstract class GameObject {
         ctx.lineWidth = 3;
         ctx.strokeRect(this.x + 1.5, this.y + 1.5, this.width - 3, this.height - 3);
     }
-    abstract update(dt: number, player: Player, game: Game): void;
+    update(dt: number, player: Player, game: Game): void {
+        // default: no update needed
+    }
 
     resolvePlayerCollision(player: Player, normal: Point, game: Game): boolean {
         const b = this.getBounds();

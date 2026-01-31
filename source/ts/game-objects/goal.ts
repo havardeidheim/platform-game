@@ -28,9 +28,6 @@ export class Goal extends GameObject {
         ctx.stroke();
     }
 
-    update(dt: number, player: Player, game: Game): void {
-    }
-
     resolvePlayerCollision(player: Player, normal: Point, game: Game): boolean {
         if (this.getBounds().intersects(player.getBounds())) {
             game.win();
