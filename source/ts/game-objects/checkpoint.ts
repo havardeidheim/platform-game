@@ -5,9 +5,10 @@ export class CheckPoint extends GameObject {
     active: boolean = false;
 
     render(ctx: CanvasRenderingContext2D): void {
+        const circleDiameter = 40;
         const cx = this.x + this.width / 2;
-        const cy = this.y + this.width / 2;
-        const r = this.width / 2 - 1.5;
+        const cy = this.y + circleDiameter / 2;
+        const r = circleDiameter / 2 - 1.5;
         const halfRectW = r / 2;
         const rectBottom = this.y + this.height - 1.5;
         const intersectY = cy + r * Math.sqrt(3) / 2;
