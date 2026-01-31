@@ -1,6 +1,6 @@
 import { GameObject } from './game-object.js';
 import { Point } from '../utils/geometry.js';
-import { PlayerKeyboardControl } from '../player-keyboard-control.js';
+import { GameKeyboardControls } from '../game-keyboard-controls.js';
 import {
     X_MAX_SPEED, Y_MAX_SPEED,
     X_ACCELERATION, Y_ACCELERATION,
@@ -15,7 +15,7 @@ export class Player extends GameObject {
     private canJump: boolean = false;
     private jumping: boolean = false;
     private lastPosition: Point;
-    private controls: PlayerKeyboardControl;
+    private controls: GameKeyboardControls;
 
     slideLeft: boolean = false;
     slideRight: boolean = false;
@@ -23,7 +23,7 @@ export class Player extends GameObject {
     startX: number;
     startY: number;
 
-    constructor(x: number, y: number, controls: PlayerKeyboardControl) {
+    constructor(x: number, y: number, controls: GameKeyboardControls) {
         super(x, y, PLAYER_WIDTH, PLAYER_HEIGHT, 0);
         this.startX = x;
         this.startY = y;

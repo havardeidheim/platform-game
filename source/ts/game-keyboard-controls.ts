@@ -1,4 +1,4 @@
-export class PlayerKeyboardControl {
+export class GameKeyboardControls {
     private keys: Record<string, boolean> = {};
     private onKeyDown: (e: KeyboardEvent) => void;
     private onKeyUp: (e: KeyboardEvent) => void;

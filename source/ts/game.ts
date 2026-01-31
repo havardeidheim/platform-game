@@ -1,14 +1,14 @@
 import { Level } from './levels/level.js';
 import { Player } from './game-objects/player.js';
 import { CheckPoint } from './game-objects/checkpoint.js';
-import { PlayerKeyboardControl } from './player-keyboard-control.js';
+import { GameKeyboardControls } from './game-keyboard-controls.js';
 
 export class Game {
     level: Level;
     running: boolean = false;
     currentDimension: number = 1;
     player: Player;
-    private controls: PlayerKeyboardControl;
+    private controls: GameKeyboardControls;
     private animationFrameId: number = 0;
     private lastTime: number = 0;
     private frameInterval: number = 1000 / 60;
@@ -26,7 +26,7 @@ export class Game {
     constructor(level: Level, ctx: CanvasRenderingContext2D) {
         this.level = level;
         this.ctx = ctx;
-        this.controls = new PlayerKeyboardControl();
+        this.controls = new GameKeyboardControls();
         this.player = new Player(0, 0, this.controls);
     }
 
@@ -50,8 +50,8 @@ export class Game {
         this.currentDimension = 1;
 
         if (this.checkpoint) {
-            this.player.startX = this.checkpoint.x + 10;
-            this.player.startY = this.checkpoint.y + 10;
+            this.player.startX = this.checkpoint.x + this.player.width/2;
+            this.player.startY = this.checkpoint.y + this.player.width/2;
         }
 
         this.player.respawn();
