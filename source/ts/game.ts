@@ -16,6 +16,11 @@ export class Game {
     private accumulated: number = 0;
     private ctx: CanvasRenderingContext2D;
 
+    // FPS counter
+    private fpsFrames: number = 0;
+    private fpsTime: number = 0;
+    private fpsDisplay: number = 0;
+
     private checkpoint: CheckPoint | null = null;
 
     // Camera state
@@ -90,11 +95,21 @@ export class Game {
             return;
         }
 
-        const dt = this.accumulated / 1000;
-        this.accumulated = 0;
-
-        this.update(dt);
+        this.updateFps(time);
+        while (this.accumulated >= this.frameInterval) {
+            this.update(this.frameInterval / 1000);
+            this.accumulated -= this.frameInterval;
+        }
         this.render();
+    }
+
+    private updateFps(time: number): void {
+        this.fpsFrames++;
+        if (time - this.fpsTime >= 1000) {
+            this.fpsDisplay = this.fpsFrames;
+            this.fpsFrames = 0;
+            this.fpsTime = time;
+        }
     }
 
     private update(dt: number): void {
@@ -219,5 +234,17 @@ export class Game {
         this.player.render(ctx);
 
         ctx.restore();
+
+        this.renderFps();
+    }
+
+    private renderFps(): void {
+        const { ctx } = this;
+        const text = `FPS: ${this.fpsDisplay}`;
+        ctx.font = '14px monospace';
+        ctx.fillStyle = 'white';
+        ctx.textAlign = 'right';
+        ctx.fillText(text, ctx.canvas.width - 10, 20);
+        ctx.textAlign = 'left';
     }
 }
