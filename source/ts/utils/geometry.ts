@@ -53,6 +53,20 @@ export class Rectangle {
     }
 }
 
+export function intersects(a: Rectangle, b: Rectangle): boolean {
+    return a.left < b.right &&
+           a.right > b.left &&
+           a.top < b.bottom &&
+           a.bottom > b.top;
+}
+
+export function contains(outer: Rectangle, inner: Rectangle): boolean {
+    return inner.left >= outer.left &&
+           inner.right <= outer.right &&
+           inner.top >= outer.top &&
+           inner.bottom <= outer.bottom;
+}
+
 export class Line {
     x1: number;
     y1: number;

@@ -3,7 +3,8 @@ import { COLOR_TEXT_BACKGROUND, COLOR_TEXT_STROKE } from '../utils/colors.js';
 import { DIMENSION_STATIC } from '../utils/constants.js';
 
 const CORNER_RADIUS = 5;
-const FONT_SIZE = 24;
+const FONT_SIZE = 20;
+const PADDING = 10;
 
 export class Text extends GameObject {
     text: string;
@@ -15,17 +16,21 @@ export class Text extends GameObject {
 
     render(ctx: CanvasRenderingContext2D): void {
         const r = CORNER_RADIUS;
+        const bx = this.x - PADDING;
+        const by = this.y - PADDING;
+        const bw = this.width + PADDING * 2;
+        const bh = this.height + PADDING * 2;
 
         ctx.beginPath();
-        ctx.moveTo(this.x + r, this.y);
-        ctx.lineTo(this.x + this.width - r, this.y);
-        ctx.arcTo(this.x + this.width, this.y, this.x + this.width, this.y + r, r);
-        ctx.lineTo(this.x + this.width, this.y + this.height - r);
-        ctx.arcTo(this.x + this.width, this.y + this.height, this.x + this.width - r, this.y + this.height, r);
-        ctx.lineTo(this.x + r, this.y + this.height);
-        ctx.arcTo(this.x, this.y + this.height, this.x, this.y + this.height - r, r);
-        ctx.lineTo(this.x, this.y + r);
-        ctx.arcTo(this.x, this.y, this.x + r, this.y, r);
+        ctx.moveTo(bx + r, by);
+        ctx.lineTo(bx + bw - r, by);
+        ctx.arcTo(bx + bw, by, bx + bw, by + r, r);
+        ctx.lineTo(bx + bw, by + bh - r);
+        ctx.arcTo(bx + bw, by + bh, bx + bw - r, by + bh, r);
+        ctx.lineTo(bx + r, by + bh);
+        ctx.arcTo(bx, by + bh, bx, by + bh - r, r);
+        ctx.lineTo(bx, by + r);
+        ctx.arcTo(bx, by, bx + r, by, r);
         ctx.closePath();
 
         ctx.fillStyle = COLOR_TEXT_BACKGROUND;

@@ -14,6 +14,12 @@ export class Game {
     private accumulated: number = 0;
     private ctx: CanvasRenderingContext2D;
 
+    // Camera state
+    private cameraX: number = 0;
+    private cameraY: number = 0;
+    private firstSpawn: boolean = true;
+    private respawnCamera: boolean = false;
+
     constructor(level: Level, ctx: CanvasRenderingContext2D) {
         this.level = level;
         this.ctx = ctx;
@@ -58,6 +64,12 @@ export class Game {
     }
 
     private update(dt: number): void {
+        // Handle respawn
+        if (this.controls.hasRespawned()) {
+            this.player.respawn();
+            this.respawnCamera = true;
+        }
+
         const passiveDimension = this.currentDimension === 1 ? 2 : 1;
 
         // 1. Passive dimension (background)
@@ -83,6 +95,36 @@ export class Game {
 
         // 4. Player (after all other objects)
         this.player.update(dt);
+
+        // 5. Update camera to follow player
+        this.centerStage();
+    }
+
+    private centerStage(): void {
+        const canvasWidth = this.ctx.canvas.width;
+        const canvasHeight = this.ctx.canvas.height;
+
+        // X: player is always centered horizontally
+        this.cameraX = this.player.x - canvasWidth / 2;
+
+        // Y: dead zone between upper and lower bounds
+        if (this.firstSpawn || this.respawnCamera) {
+            // On first spawn or respawn, center player vertically
+            this.cameraY = this.player.y - canvasHeight / 2;
+            this.firstSpawn = false;
+            this.respawnCamera = false;
+        } else {
+            const playerScreenY = this.player.y - this.cameraY;
+            const upperBound = canvasHeight / 3 + 50;
+            const lowerBound = (canvasHeight / 3) * 2;
+
+            if (playerScreenY < upperBound) {
+                this.cameraY = this.player.y - upperBound;
+            } else if (playerScreenY > lowerBound) {
+                this.cameraY = this.player.y - lowerBound;
+            }
+            // Within dead zone: cameraY stays unchanged
+        }
     }
 
     private renderBackground(): void {
@@ -96,6 +138,10 @@ export class Game {
 
         const { ctx } = this;
         const passiveDimension = this.currentDimension === 1 ? 2 : 1;
+
+        // Apply camera offset — all world objects shift by the camera position
+        ctx.save();
+        ctx.translate(-this.cameraX, -this.cameraY);
 
         // 1. Passive dimension (background)
         for (const obj of this.level.objects) {
@@ -120,5 +166,7 @@ export class Game {
 
         // 4. Player (always on top of everything)
         this.player.render(ctx);
+
+        ctx.restore();
     }
 }
