@@ -59,7 +59,7 @@
       "dimension": 1
     },
     {
-      "type": "SlidingBlock",
+      "type": "StickyBlock",
       "x": 248,
       "y": -234,
       "width": 20,
@@ -83,7 +83,7 @@
       "dimension": 1
     },
     {
-      "type": "SlidingBlock",
+      "type": "StickyBlock",
       "x": -60,
       "y": -360,
       "width": 20,
@@ -91,7 +91,7 @@
       "dimension": 1
     },
     {
-      "type": "SlidingBlock",
+      "type": "StickyBlock",
       "x": -378,
       "y": -355,
       "width": 20,
@@ -115,7 +115,7 @@
       "range": 40
     },
     {
-      "type": "SlidingBlock",
+      "type": "StickyBlock",
       "x": -430,
       "y": -275,
       "width": 20,
@@ -147,7 +147,7 @@
       "dimension": 1
     },
     {
-      "type": "SlidingBlock",
+      "type": "StickyBlock",
       "x": -1092,
       "y": -340,
       "width": 20,
@@ -195,7 +195,7 @@
       "dimension": 2
     },
     {
-      "type": "SlidingBlock",
+      "type": "StickyBlock",
       "x": -1573,
       "y": -265,
       "width": 20,

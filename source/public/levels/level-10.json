@@ -27,7 +27,7 @@
       "dimension": 1
     },
     {
-      "type": "SlidingBlock",
+      "type": "StickyBlock",
       "x": 120,
       "y": -120,
       "width": 20,
@@ -35,7 +35,7 @@
       "dimension": 1
     },
     {
-      "type": "SlidingBlock",
+      "type": "StickyBlock",
       "x": 260,
       "y": -120,
       "width": 20,
@@ -43,7 +43,7 @@
       "dimension": 1
     },
     {
-      "type": "SlidingBlock",
+      "type": "StickyBlock",
       "x": 400,
       "y": -120,
       "width": 20,
@@ -51,7 +51,7 @@
       "dimension": 1
     },
     {
-      "type": "SlidingBlock",
+      "type": "StickyBlock",
       "x": 540,
       "y": -120,
       "width": 20,
@@ -107,7 +107,7 @@
       "dimension": 1
     },
     {
-      "type": "SlidingBlock",
+      "type": "StickyBlock",
       "x": 1415,
       "y": -395,
       "width": 20,
@@ -115,7 +115,7 @@
       "dimension": 1
     },
     {
-      "type": "SlidingBlock",
+      "type": "StickyBlock",
       "x": 1415,
       "y": -245,
       "width": 20,
@@ -123,7 +123,7 @@
       "dimension": 1
     },
     {
-      "type": "SlidingBlock",
+      "type": "StickyBlock",
       "x": 1279,
       "y": -329,
       "width": 20,
@@ -203,7 +203,7 @@
       "dimension": 1
     },
     {
-      "type": "SlidingBlock",
+      "type": "StickyBlock",
       "x": 1040,
       "y": -501,
       "width": 20,

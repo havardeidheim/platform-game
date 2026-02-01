@@ -20,7 +20,7 @@ export interface LevelData {
 import { Block } from '../game-objects/block.js';
 import { InterBlock } from '../game-objects/inter-block.js';
 import { SneakyBlock } from '../game-objects/sneaky-block.js';
-import { SlidingBlock } from '../game-objects/sliding-block.js';
+import { StickyBlock } from '../game-objects/sticky-block.js';
 import { FallingBlock } from '../game-objects/falling-block.js';
 import { BouncingBlock } from '../game-objects/bouncing-block.js';
 import { BouncingBlockRot } from '../game-objects/bouncing-block-rot.js';
@@ -45,7 +45,7 @@ const typeMap: Record<string, new (...args: any[]) => GameObject> = {
     Block,
     InterBlock,
     SneakyBlock,
-    SlidingBlock,
+    StickyBlock,
     FallingBlock,
     BouncingBlock,
     BouncingBlockRot,
