@@ -11,7 +11,7 @@ export const COLOR_INTER_BLOCK = '#000000';
 export const COLOR_FALLING_BLOCK = 'yellow';
 export const COLOR_BOUNCING_BLOCK = '#ff00ff';
 export const COLOR_STICKY_BLOCK = '#00bfff';
-export const COLOR_SNEAKY_BLOCK = '#2a2a2a';
+export const COLOR_SNEAKY_BLOCK = '#ffffff';
 
 export const COLOR_TEXT_BACKGROUND = '#f5f5dc';
 export const COLOR_TEXT_STROKE = '#000000';
