@@ -77,7 +77,7 @@ export class Game {
         this.won = true;
         setTimeout(() => {
             this.onWinCallback?.();
-        }, 1000);
+        }, 500);
     }
 
     setOnWin(callback: () => void): void {

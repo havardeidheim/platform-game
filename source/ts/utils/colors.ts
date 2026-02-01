@@ -3,10 +3,10 @@ export const COLOR_BLOCK_FILL = '#54606c';
 
 export const COLOR_DANGER_RED = '#ff0000';
 
-export const COLOR_CHECKPOINT = 'green';
-export const COLOR_GOAL = 'orange';
+export const COLOR_CHECKPOINT = '#00CC00';
+export const COLOR_GOAL = '#FF9900';
 
-export const COLOR_NORMAL_BLOCK = 'teal';
+export const COLOR_NORMAL_BLOCK = '#0099CC';
 export const COLOR_INTER_BLOCK = '#000000';
 export const COLOR_FALLING_BLOCK = 'yellow';
 export const COLOR_BOUNCING_BLOCK = '#ff00ff';

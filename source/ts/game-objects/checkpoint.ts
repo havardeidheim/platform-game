@@ -16,6 +16,14 @@ export class CheckPoint extends GameObject {
         const rectBottom = this.y + this.height - 1.5;
         const intersectY = cy + r * Math.sqrt(3) / 2;
 
+        if (this.active) {
+            ctx.beginPath();
+            ctx.arc(cx, cy, r + 10, 0, 2 * Math.PI);
+            ctx.strokeStyle = '#FFFFFF';
+            ctx.lineWidth = 3;
+            ctx.stroke();
+        }
+
         ctx.beginPath();
         ctx.moveTo(cx - halfRectW, rectBottom);
         ctx.lineTo(cx - halfRectW, intersectY);
