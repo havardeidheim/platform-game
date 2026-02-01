@@ -159,11 +159,12 @@ export class Game {
         // 2. Update player
         this.player.update(dt, this.player, this);
 
-        // 3. Resolve collisions (only active dimension + static)
+        // 3. Resolve collisions – sort by Y so higher objects resolve first,
+        // preventing a falling block from pulling the player past a block below.
         let collided = false;
         const normal = new Point(0, 0);
 
-        for (const obj of this.level.objects) {
+        for (const obj of [...this.level.objects].sort((a, b) => a.y - b.y)) {
             if (obj.dimension === this.currentDimension || obj.dimension === DIMENSION_STATIC) {
                 normal.x = 0;
                 normal.y = 0;
