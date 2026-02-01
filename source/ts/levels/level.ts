@@ -17,7 +17,7 @@ export interface LevelData {
     sourceFile: string;
     objects: LevelObjectData[];
 }
-import { Block } from '../game-objects/block.js';
+import { NormalBlock } from '../game-objects/normal-block.js';
 import { InterBlock } from '../game-objects/inter-block.js';
 import { SneakyBlock } from '../game-objects/sneaky-block.js';
 import { StickyBlock } from '../game-objects/sticky-block.js';
@@ -32,17 +32,13 @@ import { UpSpike } from '../game-objects/up-spike.js';
 import { DownSpike } from '../game-objects/down-spike.js';
 import { LeftSpike } from '../game-objects/left-spike.js';
 import { RightSpike } from '../game-objects/right-spike.js';
-import { UpPlatform } from '../game-objects/up-platform.js';
-import { DownPlatform } from '../game-objects/down-platform.js';
-import { LeftPlatform } from '../game-objects/left-platform.js';
-import { RightPlatform } from '../game-objects/right-platform.js';
 import { UpLeftTrampoline } from '../game-objects/up-left-trampoline.js';
 import { UpRightTrampoline } from '../game-objects/up-right-trampoline.js';
 import { VerticalSawBlade } from '../game-objects/vertical-saw-blade.js';
 import { HorizontalSawBlade } from '../game-objects/horizontal-saw-blade.js';
 
 const typeMap: Record<string, new (...args: any[]) => GameObject> = {
-    Block,
+    NormalBlock,
     InterBlock,
     SneakyBlock,
     StickyBlock,
@@ -57,10 +53,6 @@ const typeMap: Record<string, new (...args: any[]) => GameObject> = {
     DownSpike,
     LeftSpike,
     RightSpike,
-    UpPlatform,
-    DownPlatform,
-    LeftPlatform,
-    RightPlatform,
     UpLeftTrampoline,
     UpRightTrampoline,
     VerticalSawBlade,

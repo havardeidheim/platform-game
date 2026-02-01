@@ -1,12 +1,12 @@
 import { GameObject } from './game-object.js';
 import { Point } from '../utils/geometry.js';
-import { COLOR_FILL, COLOR_BOUNCING_BLOCK } from '../utils/colors.js';
+import { COLOR_BLOCK_FILL, COLOR_BOUNCING_BLOCK } from '../utils/colors.js';
 import type { Player } from './player.js';
 import type { Game } from '../game.js';
 
 export class BouncingBlock extends GameObject {
     render(ctx: CanvasRenderingContext2D): void {
-        ctx.fillStyle = COLOR_FILL;
+        ctx.fillStyle = COLOR_BLOCK_FILL;
         ctx.fillRect(this.x, this.y, this.width, this.height);
         ctx.strokeStyle = COLOR_BOUNCING_BLOCK;
         ctx.lineWidth = 3;

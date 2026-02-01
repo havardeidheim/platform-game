@@ -1,5 +1,5 @@
 import { GameObject } from './game-object.js';
-import { COLOR_FILL, COLOR_DANGER_RED } from '../utils/colors.js';
+import { COLOR_BLOCK_FILL, COLOR_DANGER_RED } from '../utils/colors.js';
 import { Point } from '../utils/geometry.js';
 import type { Player } from './player.js';
 import type { Game } from '../game.js';
@@ -54,7 +54,7 @@ export class HorizontalSawBlade extends GameObject {
         }
         ctx.closePath();
 
-        ctx.fillStyle = COLOR_FILL;
+        ctx.fillStyle = COLOR_BLOCK_FILL;
         ctx.fill();
         ctx.strokeStyle = COLOR_DANGER_RED;
         ctx.lineWidth = 3;

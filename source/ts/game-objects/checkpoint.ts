@@ -1,7 +1,7 @@
 import { GameObject } from './game-object.js';
 import { Player } from './player.js';
 import { Point } from '../utils/geometry.js';
-import { COLOR_FILL, COLOR_CHECKPOINT } from '../utils/colors.js';
+import { COLOR_BLOCK_FILL, COLOR_CHECKPOINT } from '../utils/colors.js';
 import { Game } from '../game.js';
 
 export class CheckPoint extends GameObject {
@@ -23,7 +23,7 @@ export class CheckPoint extends GameObject {
         ctx.lineTo(cx + halfRectW, rectBottom);
         ctx.closePath();
 
-        ctx.fillStyle = COLOR_FILL;
+        ctx.fillStyle = COLOR_BLOCK_FILL;
         ctx.fill();
         ctx.strokeStyle = COLOR_CHECKPOINT;
         ctx.lineWidth = 3;

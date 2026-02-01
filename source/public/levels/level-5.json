@@ -19,7 +19,7 @@
       "dimension": 1
     },
     {
-      "type": "Block",
+      "type": "NormalBlock",
       "x": 660,
       "y": 350,
       "width": 20,
@@ -59,7 +59,7 @@
       "range": 85
     },
     {
-      "type": "Block",
+      "type": "NormalBlock",
       "x": -35,
       "y": 80,
       "width": 200,
@@ -91,7 +91,7 @@
       "dimension": 1
     },
     {
-      "type": "Block",
+      "type": "NormalBlock",
       "x": 660,
       "y": 429,
       "width": 200,
@@ -99,7 +99,7 @@
       "dimension": 1
     },
     {
-      "type": "Block",
+      "type": "NormalBlock",
       "x": 284,
       "y": 345,
       "width": 420,
@@ -107,7 +107,7 @@
       "dimension": 1
     },
     {
-      "type": "Block",
+      "type": "NormalBlock",
       "x": 840,
       "y": 325,
       "width": 20,
@@ -155,7 +155,7 @@
       "range": -40
     },
     {
-      "type": "Block",
+      "type": "NormalBlock",
       "x": 637,
       "y": 227,
       "width": 20,
@@ -163,7 +163,7 @@
       "dimension": 1
     },
     {
-      "type": "Block",
+      "type": "NormalBlock",
       "x": 470,
       "y": 278,
       "width": 20,
@@ -171,7 +171,7 @@
       "dimension": 1
     },
     {
-      "type": "Block",
+      "type": "NormalBlock",
       "x": 553,
       "y": 518,
       "width": 250,

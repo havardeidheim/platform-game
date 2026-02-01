@@ -59,7 +59,7 @@
       "dimension": 1
     },
     {
-      "type": "Block",
+      "type": "NormalBlock",
       "x": 625,
       "y": -20,
       "width": 100,
@@ -91,7 +91,7 @@
       "dimension": 0
     },
     {
-      "type": "Block",
+      "type": "NormalBlock",
       "x": 1060,
       "y": -20,
       "width": 100,
@@ -227,7 +227,7 @@
       "dimension": 1
     },
     {
-      "type": "Block",
+      "type": "NormalBlock",
       "x": 430,
       "y": -527,
       "width": 200,

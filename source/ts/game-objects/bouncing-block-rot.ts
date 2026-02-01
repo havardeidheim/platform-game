@@ -1,6 +1,6 @@
 import { GameObject } from './game-object.js';
 import { Point, Line } from '../utils/geometry.js';
-import { COLOR_FILL, COLOR_BOUNCING_BLOCK } from '../utils/colors.js';
+import { COLOR_BLOCK_FILL, COLOR_BOUNCING_BLOCK } from '../utils/colors.js';
 import type { Player } from './player.js';
 import type { Game } from '../game.js';
 
@@ -16,7 +16,7 @@ export class BouncingBlockRot extends GameObject {
         const cy = this.y + 20;
 
         // Draw diamond shape
-        ctx.fillStyle = COLOR_FILL;
+        ctx.fillStyle = COLOR_BLOCK_FILL;
         ctx.beginPath();
         ctx.moveTo(cx, this.y);          // top
         ctx.lineTo(this.x + 40, cy);     // right

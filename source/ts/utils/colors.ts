@@ -1,19 +1,22 @@
-export const COLOR_BACKGROUND = '#708090';
-export const COLOR_FILL = '#54606c';
-export const COLOR_STROKE = '#ff00ff';
+export const COLOR_GAME_BACKGROUND = '#708090';
+export const COLOR_BLOCK_FILL = '#54606c';
 
 export const COLOR_DANGER_RED = '#ff0000';
-export const COLOR_FALLING_BLOCK = 'yellow';
-export const COLOR_BLOCK = 'teal';
+
 export const COLOR_CHECKPOINT = 'green';
 export const COLOR_GOAL = 'orange';
+
+export const COLOR_NORMAL_BLOCK = 'teal';
 export const COLOR_INTER_BLOCK = '#000000';
+export const COLOR_FALLING_BLOCK = 'yellow';
+export const COLOR_BOUNCING_BLOCK = '#ff00ff';
+export const COLOR_STICKY_BLOCK = '#00bfff';
+export const COLOR_SNEAKY_BLOCK = '#2a2a2a';
 
 export const COLOR_TEXT_BACKGROUND = '#f5f5dc';
 export const COLOR_TEXT_STROKE = '#000000';
 
-export const COLOR_BOUNCING_BLOCK = '#ff00ff';
-export const COLOR_STICKY_BLOCK = '#00bfff';
+export const COLOR_MISSING = '#ff0000';
 
 export const COLOR_HTML_BACKGROUND = '#000';
 export const COLOR_CANVAS_BORDER = '#333';

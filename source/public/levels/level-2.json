@@ -11,7 +11,7 @@
       "dimension": 1
     },
     {
-      "type": "Block",
+      "type": "NormalBlock",
       "x": 400,
       "y": 190,
       "width": 300,
@@ -19,7 +19,7 @@
       "dimension": 1
     },
     {
-      "type": "Block",
+      "type": "NormalBlock",
       "x": 380,
       "y": 90,
       "width": 20,
@@ -27,7 +27,7 @@
       "dimension": 1
     },
     {
-      "type": "Block",
+      "type": "NormalBlock",
       "x": 700,
       "y": 90,
       "width": 20,
@@ -35,7 +35,7 @@
       "dimension": 1
     },
     {
-      "type": "Block",
+      "type": "NormalBlock",
       "x": 400,
       "y": 320,
       "width": 400,
@@ -43,7 +43,7 @@
       "dimension": 2
     },
     {
-      "type": "Block",
+      "type": "NormalBlock",
       "x": 380,
       "y": 220,
       "width": 20,
@@ -51,7 +51,7 @@
       "dimension": 2
     },
     {
-      "type": "Block",
+      "type": "NormalBlock",
       "x": 800,
       "y": 220,
       "width": 20,
@@ -59,7 +59,7 @@
       "dimension": 2
     },
     {
-      "type": "Block",
+      "type": "NormalBlock",
       "x": 890,
       "y": 385,
       "width": 120,
@@ -75,7 +75,7 @@
       "dimension": 1
     },
     {
-      "type": "Block",
+      "type": "NormalBlock",
       "x": 1070,
       "y": 385,
       "width": 120,
@@ -83,7 +83,7 @@
       "dimension": 2
     },
     {
-      "type": "Block",
+      "type": "NormalBlock",
       "x": 1220,
       "y": 285,
       "width": 20,
@@ -91,7 +91,7 @@
       "dimension": 2
     },
     {
-      "type": "Block",
+      "type": "NormalBlock",
       "x": 1290,
       "y": 285,
       "width": 20,
@@ -99,7 +99,7 @@
       "dimension": 1
     },
     {
-      "type": "Block",
+      "type": "NormalBlock",
       "x": 1530,
       "y": 385,
       "width": 140,
@@ -115,7 +115,7 @@
       "dimension": 1
     },
     {
-      "type": "Block",
+      "type": "NormalBlock",
       "x": 1338,
       "y": 385,
       "width": 120,

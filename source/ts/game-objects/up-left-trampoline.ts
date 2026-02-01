@@ -1,13 +1,13 @@
 import { GameObject } from './game-object.js';
 import { Point } from '../utils/geometry.js';
-import { COLOR_FILL, COLOR_STROKE } from '../utils/colors.js';
+import { COLOR_BLOCK_FILL, COLOR_BOUNCING_BLOCK } from '../utils/colors.js';
 import type { Player } from './player.js';
 import type { Game } from '../game.js';
 
 export class UpLeftTrampoline extends GameObject {
     render(ctx: CanvasRenderingContext2D): void {
         // Triangle: bottom-left → top-right diagonal, right edge, bottom edge
-        ctx.fillStyle = COLOR_FILL;
+        ctx.fillStyle = COLOR_BLOCK_FILL;
         ctx.beginPath();
         ctx.moveTo(this.x, this.y + this.height);
         ctx.lineTo(this.x + this.width, this.y);
@@ -15,7 +15,7 @@ export class UpLeftTrampoline extends GameObject {
         ctx.closePath();
         ctx.fill();
 
-        ctx.strokeStyle = COLOR_STROKE;
+        ctx.strokeStyle = COLOR_BOUNCING_BLOCK;
         ctx.lineWidth = 3;
         ctx.beginPath();
         ctx.moveTo(this.x, this.y + this.height);
