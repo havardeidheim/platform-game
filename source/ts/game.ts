@@ -252,16 +252,36 @@ export class Game {
 
         ctx.restore();
 
+        this.renderLevelName();
+        this.renderControlHints();
         this.renderFps();
+    }
+
+    private renderLevelName(): void {
+        const { ctx } = this;
+        ctx.font = '18px monospace';
+        ctx.fillStyle = 'white';
+        ctx.textAlign = 'left';
+        ctx.fillText(`Level ${this.level.level}`, 10, 20);
+    }
+
+    private renderControlHints(): void {
+        const { ctx } = this;
+        ctx.font = '18px monospace';
+        ctx.fillStyle = 'white';
+        ctx.textAlign = 'right';
+        ctx.fillText('ESC - exit level', ctx.canvas.width - 10, 20);
+        ctx.fillText('R - respawn', ctx.canvas.width - 10, 42);
+        ctx.textAlign = 'left';
     }
 
     private renderFps(): void {
         const { ctx } = this;
         const text = `FPS: ${this.fpsDisplay}`;
-        ctx.font = '14px monospace';
+        ctx.font = '18px monospace';
         ctx.fillStyle = 'white';
         ctx.textAlign = 'right';
-        ctx.fillText(text, ctx.canvas.width - 10, 20);
+        ctx.fillText(text, ctx.canvas.width - 10, ctx.canvas.height - 10);
         ctx.textAlign = 'left';
     }
 }
