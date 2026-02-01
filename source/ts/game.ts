@@ -23,6 +23,8 @@ export class Game {
     private fpsDisplay: number = 0;
 
     private checkpoint: CheckPoint | null = null;
+    private onWinCallback: (() => void) | null = null;
+    private won: boolean = false;
 
     // Camera state
     private cameraX: number = 0;
@@ -70,7 +72,15 @@ export class Game {
     }
 
     win(): void {
-        this.pause();
+        if (this.won) return;
+        this.won = true;
+        setTimeout(() => {
+            this.onWinCallback?.();
+        }, 1000);
+    }
+
+    setOnWin(callback: () => void): void {
+        this.onWinCallback = callback;
     }
 
     setCheckpoint(checkpoint: CheckPoint): void {

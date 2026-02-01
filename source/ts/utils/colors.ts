@@ -20,3 +20,7 @@ export const COLOR_MISSING = '#ff0000';
 
 export const COLOR_HTML_BACKGROUND = '#000';
 export const COLOR_CANVAS_BORDER = '#333';
+
+export const COLOR_LEVEL_SELECT_ITEM = '#54606c';
+export const COLOR_LEVEL_SELECT_ITEM_HOVER = '#6a7a8a';
+export const COLOR_LEVEL_SELECT_TITLE = 'orange';

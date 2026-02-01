@@ -1,15 +1,35 @@
 import { Game } from './game.js';
 import { Level } from './levels/level.js';
+import { LevelSelect } from './level-select.js';
 
 const canvas = document.getElementById('gameCanvas') as HTMLCanvasElement;
 const ctx = canvas.getContext('2d')!;
 
-async function init() {
-    // const level = await Level.load('./levels/level-1.json');
-    // const level = await Level.load('./levels/level-7.json');
-    const level = await Level.load('./levels/level-7.json');
-    const game = new Game(level, ctx);
-    game.start();
+let currentGame: Game | null = null;
+let levelSelect: LevelSelect | null = null;
+
+function showLevelSelect(): void {
+    if (currentGame) {
+        currentGame.destroy();
+        currentGame = null;
+    }
+
+    levelSelect = new LevelSelect(ctx, startLevel);
+    levelSelect.start();
 }
 
-init();
+async function startLevel(levelNumber: number): Promise<void> {
+    if (levelSelect) {
+        levelSelect.destroy();
+        levelSelect = null;
+    }
+
+    const level = await Level.load(`./levels/level-${levelNumber}.json`);
+    currentGame = new Game(level, ctx);
+    currentGame.setOnWin(() => {
+        showLevelSelect();
+    });
+    currentGame.start();
+}
+
+showLevelSelect();
