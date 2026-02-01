@@ -29,6 +29,9 @@ async function startLevel(levelNumber: number): Promise<void> {
     currentGame.setOnWin(() => {
         showLevelSelect();
     });
+    currentGame.setOnExit(() => {
+        showLevelSelect();
+    });
     currentGame.start();
 }
 

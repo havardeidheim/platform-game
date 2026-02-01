@@ -24,6 +24,7 @@ export class Game {
 
     private checkpoint: CheckPoint | null = null;
     private onWinCallback: (() => void) | null = null;
+    private onExitCallback: (() => void) | null = null;
     private won: boolean = false;
 
     // Camera state
@@ -83,6 +84,10 @@ export class Game {
         this.onWinCallback = callback;
     }
 
+    setOnExit(callback: () => void): void {
+        this.onExitCallback = callback;
+    }
+
     setCheckpoint(checkpoint: CheckPoint): void {
         if(this.checkpoint){
             this.checkpoint.active = false;
@@ -128,6 +133,12 @@ export class Game {
     }
 
     private update(dt: number): void {
+        // Handle exit to level select
+        if (this.controls.hasExited()) {
+            this.onExitCallback?.();
+            return;
+        }
+
         // Handle respawn
         if (this.controls.hasRespawned()) {
             this.reset();

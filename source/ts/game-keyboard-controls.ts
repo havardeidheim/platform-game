@@ -32,6 +32,10 @@ export class GameKeyboardControls {
         return this.consume('KeyR');
     }
 
+    hasExited(): boolean {
+        return this.consume('Escape');
+    }
+
     private consume(code: string): boolean {
         if (this.keys[code]) {
             this.keys[code] = false;
