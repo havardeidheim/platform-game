@@ -61,7 +61,7 @@ export class FallingBlock extends GameObject {
         return false;
     }
 
-    update(dt: number, player: Player, game: Game): void {
+    update(player: Player, game: Game): void {
         // Capture position before movement for collision checks
         this.lastBlockY = this.y;
 

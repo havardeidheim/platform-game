@@ -39,7 +39,7 @@ export abstract class GameObject {
         ctx.strokeRect(this.x + 1.5, this.y + 1.5, this.width - 3, this.height - 3);
     }
     
-    update(dt: number, player: Player, game: Game): void {
+    update(player: Player, game: Game): void {
         // default: no update needed
     }
 

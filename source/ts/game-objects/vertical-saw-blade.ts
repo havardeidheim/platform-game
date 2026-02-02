@@ -65,8 +65,8 @@ export class VerticalSawBlade extends GameObject {
         ctx.restore();
     }
 
-    update(dt: number, player: Player, game: Game): void {
-        this.rotation += 2 * dt;
+    update(player: Player, game: Game): void {
+        this.rotation += 1 / 30;
 
         if (this.dynamic) {
             if (this.progress >= Math.abs(this.range)) {

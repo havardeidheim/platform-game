@@ -116,10 +116,8 @@ export class Game {
         }
 
         this.updateFps(time);
-        while (this.accumulated >= this.frameInterval) {
-            this.update(this.frameInterval / 1000);
-            this.accumulated -= this.frameInterval;
-        }
+        this.update();
+        this.accumulated = Math.min(this.accumulated - this.frameInterval, this.frameInterval - 1);
         this.render();
     }
 
@@ -132,7 +130,7 @@ export class Game {
         }
     }
 
-    private update(dt: number): void {
+    private update(): void {
         // Handle exit to level select
         if (this.controls.hasExited()) {
             this.onExitCallback?.();
@@ -153,11 +151,11 @@ export class Game {
 
         // 1. Update all objects (animation, movement — dimension-independent)
         for (const obj of this.level.objects) {
-            obj.update(dt, this.player, this);
+            obj.update(this.player, this);
         }
 
         // 2. Update player
-        this.player.update(dt, this.player, this);
+        this.player.update(this.player, this);
 
         // 3. Resolve collisions – sort by Y so higher objects resolve first,
         // preventing a falling block from pulling the player past a block below.
