@@ -64,6 +64,27 @@ export class Game {
         cancelAnimationFrame(this.animationFrameId);
     }
 
+    resume(): void {
+        if (this.running) return;
+        this.running = true;
+        this.accumulated = 0;
+        this.lastTime = performance.now();
+        this.animationFrameId = requestAnimationFrame((t) => this.loop(t));
+    }
+
+    renderPauseOverlay(): void {
+        const { ctx } = this;
+        ctx.fillStyle = 'rgba(0, 0, 0, 0.5)';
+        ctx.fillRect(0, 0, ctx.canvas.width, ctx.canvas.height);
+        ctx.font = 'bold 48px monospace';
+        ctx.fillStyle = 'white';
+        ctx.textAlign = 'center';
+        ctx.textBaseline = 'middle';
+        ctx.fillText('PAUSED', ctx.canvas.width / 2, ctx.canvas.height / 2);
+        ctx.textAlign = 'left';
+        ctx.textBaseline = 'alphabetic';
+    }
+
     destroy(): void {
         this.pause();
         this.controls.destroy();
@@ -170,12 +191,15 @@ export class Game {
         // 2. Update player
         this.player.update(this.player, this);
 
-        // 3. Resolve collisions – sort by Y so higher objects resolve first,
-        // preventing a falling block from pulling the player past a block below.
+        // 3. Resolve collisions – sort by Y descending so lower objects resolve
+        // first.  A falling block that has carried the player past another block
+        // will have the larger Y; resolving it first repositions the player, and
+        // the block above then sees the updated position and can catch the player.
         let collided = false;
         const normal = new Point(0, 0);
 
-        for (const obj of [...this.level.objects].sort((a, b) => a.y - b.y)) {
+        this.level.objects.sort((a, b) => b.y - a.y);
+        for (const obj of this.level.objects) {
             if (obj.dimension === this.currentDimension || obj.dimension === DIMENSION_STATIC) {
                 normal.x = 0;
                 normal.y = 0;

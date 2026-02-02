@@ -1,0 +1,65 @@
+Missing Features (present in the original Flash game)
+=====================================================
+
+1. No save/progress system
+   The original Flash game tracked level completion, best times, and star ratings
+   per level using SharedObject (Flash's localStorage equivalent). The TypeScript
+   port has none of this. Completing a level has no persistent effect.
+
+2. No star/scoring system
+   The original Archivements.as had per-level star ratings (0-4 stars) based on
+   completion time thresholds. This gave levels replay value and a sense of mastery.
+
+3. No pause functionality
+   The original had pauseGame()/unpauseGame() methods and handled window focus
+   changes (pausing when the tab loses focus, reducing framerate to 10fps). The
+   current port just keeps running in the background.
+
+4. Missing one-directional platforms
+   The original had DownPlatform, UpPlatform, LeftPlatform, RightPlatform —
+   platforms you can pass through from one side but land on from the other (think
+   Mario semi-solid platforms). These aren't ported.
+
+
+Quality of Life Improvements
+============================
+
+5. No death/respawn feedback
+   When you die, the player instantly teleports to the last checkpoint with no
+   visual indication of what happened. A brief flash, screen shake, or particle
+   burst would communicate "you died" clearly.
+
+6. No level completion feedback
+   Reaching the goal just ends. There's no completion screen, no time display,
+   no "next level" prompt.
+
+7. No window focus handling
+   If you tab away, the game continues running. The accumulated time delta can
+   cause physics glitches when you return.
+
+8. Level select has no completion state
+   All 10 levels look identical in the level select. There's no indication of
+   which levels you've beaten or how well you did.
+
+9. No timer/frame counter visible during gameplay
+   The original tracked frames for scoring. Showing an in-game timer would give
+   speedrunners feedback and tie into the star rating system.
+
+10. Fixed canvas size (1280x720)
+    No responsiveness to window size. On larger monitors it's small; on smaller
+    screens it may overflow.
+
+11. Hardcoded WASD controls
+    No key rebinding. Arrow keys aren't supported as an alternative.
+
+12. No "restart level" option
+    You can respawn at checkpoint (R), but there's no quick way to restart the
+    entire level from scratch (useful for time-attack attempts).
+
+13. Falling blocks don't communicate their timer
+    FallingBlock waits 500ms then falls, but there's no visual countdown or shake
+    to telegraph the behavior to the player.
+
+14. No level transition
+    Finishing a level dumps you back to level select. There's no "continue to
+    next level" flow.

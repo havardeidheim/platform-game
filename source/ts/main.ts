@@ -35,4 +35,14 @@ async function startLevel(levelNumber: number): Promise<void> {
     currentGame.start();
 }
 
+document.addEventListener('visibilitychange', () => {
+    if (!currentGame) return;
+    if (document.hidden) {
+        currentGame.pause();
+        currentGame.renderPauseOverlay();
+    } else {
+        currentGame.resume();
+    }
+});
+
 showLevelSelect();
