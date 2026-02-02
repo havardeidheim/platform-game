@@ -3,7 +3,7 @@ import { Player } from './game-objects/player.js';
 import { CheckPoint } from './game-objects/checkpoint.js';
 import { GameKeyboardControls } from './game-keyboard-controls.js';
 import { Point } from './utils/geometry.js';
-import { DIMENSION_STATIC, DIMENSION_1, DIMENSION_2, DIMENSION_INACTIVE_ALPHA, TARGET_FPS } from './utils/constants.js';
+import { DIMENSION_STATIC, DIMENSION_1, DIMENSION_2, DIMENSION_INACTIVE_ALPHA, TARGET_FPS, PLAYER_HEIGHT } from './utils/constants.js';
 
 export class Game {
     level: Level;
@@ -33,11 +33,24 @@ export class Game {
     private firstSpawn: boolean = true;
     private respawnCamera: boolean = false;
 
+    // Fall death: Y position below which the player dies
+    private deathFloorY: number;
+
     constructor(level: Level, ctx: CanvasRenderingContext2D) {
         this.level = level;
         this.ctx = ctx;
         this.controls = new GameKeyboardControls();
         this.player = new Player(0, 0, this.controls);
+
+        // Compute death floor from the lowest object bottom edge + 5x player height
+        let lowestY = 0;
+        for (const obj of level.objects) {
+            const bottom = obj.y + obj.height;
+            if (bottom > lowestY) {
+                lowestY = bottom;
+            }
+        }
+        this.deathFloorY = lowestY + PLAYER_HEIGHT * 5;
     }
 
     start(): void {
@@ -176,7 +189,12 @@ export class Game {
             this.player.noCollision();
         }
 
-        // 4. Update camera to follow player
+        // 4. Fall death: reset if player drops too far below the map
+        if (this.player.y > this.deathFloorY) {
+            this.reset();
+        }
+
+        // 5. Update camera to follow player
         this.centerStage();
     }
 
