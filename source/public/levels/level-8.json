@@ -75,7 +75,7 @@
       "range": 300
     },
     {
-      "type": "UpRightTrampoline",
+      "type": "BouncingBlockRot",
       "x": 807,
       "y": 168,
       "width": 40,
@@ -99,7 +99,7 @@
       "range": 300
     },
     {
-      "type": "UpLeftTrampoline",
+      "type": "BouncingBlockRot",
       "x": 1197,
       "y": 69,
       "width": 40,
@@ -187,7 +187,7 @@
       "dimension": 2
     },
     {
-      "type": "UpLeftTrampoline",
+      "type": "BouncingBlockRot",
       "x": 2092,
       "y": -145,
       "width": 40,

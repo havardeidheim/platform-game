@@ -99,7 +99,7 @@
       "dimension": 1
     },
     {
-      "type": "UpLeftTrampoline",
+      "type": "BouncingBlockRot",
       "x": 1218,
       "y": -60,
       "width": 40,
@@ -195,7 +195,7 @@
       "dimension": 1
     },
     {
-      "type": "UpLeftTrampoline",
+      "type": "BouncingBlockRot",
       "x": 890,
       "y": -340,
       "width": 40,
