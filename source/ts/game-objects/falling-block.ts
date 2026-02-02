@@ -1,7 +1,7 @@
 import { GameObject } from './game-object.js';
 import { Point } from '../utils/geometry.js';
 import { COLOR_BLOCK_FILL, COLOR_FALLING_BLOCK } from '../utils/colors.js';
-import { GRAVITY, Y_MAX_SPEED } from '../utils/constants.js';
+import { GRAVITY, Y_MAX_SPEED, FRAME_INTERVAL } from '../utils/constants.js';
 import type { Player } from './player.js';
 import type { Game } from '../game.js';
 
@@ -67,7 +67,7 @@ export class FallingBlock extends GameObject {
 
         // Delay before falling starts
         if (this.started && !this.falling) {
-            this.fallTimer += dt * 1000;
+            this.fallTimer += FRAME_INTERVAL;
             if (this.fallTimer >= FALL_DELAY) {
                 this.falling = true;
                 this.respawnTimer = 0;
@@ -85,7 +85,7 @@ export class FallingBlock extends GameObject {
             this.y += this.ySpeed;
 
             // Track fall duration and reset
-            this.respawnTimer += dt * 1000;
+            this.respawnTimer += FRAME_INTERVAL;
             if (this.respawnTimer >= FALL_DURATION) {
                 this.reset();
             }

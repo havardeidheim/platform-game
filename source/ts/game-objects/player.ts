@@ -15,6 +15,7 @@ export class Player extends GameObject {
     private falling: boolean = true;
     private canJump: boolean = false;
     private jumping: boolean = false;
+    private coyoteFrames: number = 0;
     private lastPosition: Point;
     private controls: GameKeyboardControls;
 
@@ -98,6 +99,7 @@ export class Player extends GameObject {
             this.canJump = false;
             this.jumping = true;
             this.falling = true;
+            this.coyoteFrames = 0;
         }
 
         if (this.slideLeft && this.controls.isMovingLeft()) {
@@ -143,6 +145,7 @@ export class Player extends GameObject {
             this.canJump = true;
             this.falling = false;
             this.jumping = false;
+            this.coyoteFrames = 3;
         }
 
         if (this.slideLeft || this.slideRight) {
@@ -154,9 +157,14 @@ export class Player extends GameObject {
 
     noCollision(): void {
         this.falling = true;
-        this.canJump = false;
         this.slideLeft = false;
         this.slideRight = false;
+
+        if (!this.jumping && this.coyoteFrames > 0) {
+            this.coyoteFrames--;
+        } else {
+            this.canJump = false;
+        }
     }
 
     respawn(): void {
@@ -169,6 +177,7 @@ export class Player extends GameObject {
         this.falling = true;
         this.canJump = false;
         this.jumping = false;
+        this.coyoteFrames = 0;
         this.slideLeft = false;
         this.slideRight = false;
     }
