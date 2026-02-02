@@ -66,7 +66,7 @@ export class HorizontalSawBlade extends GameObject {
     }
 
     update(player: Player, game: Game): void {
-        this.rotation += 1 / 30;
+        this.rotation += (this.movingRight ? 1 : -1) / this.radius;
 
         if (this.dynamic) {
             if (this.progress >= Math.abs(this.range)) {
