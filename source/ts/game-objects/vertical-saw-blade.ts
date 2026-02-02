@@ -4,6 +4,8 @@ import { Point } from '../utils/geometry.js';
 import type { Player } from './player.js';
 import type { Game } from '../game.js';
 
+const COLLISION_ALLOWANCE = 3;
+
 export class VerticalSawBlade extends GameObject {
     private radius: number = 0;
     private range: number = 0;
@@ -32,7 +34,7 @@ export class VerticalSawBlade extends GameObject {
     render(ctx: CanvasRenderingContext2D): void {
         const cx = this.x + this.width / 2;
         const cy = this.y + this.height / 2;
-        const r = this.width / 2 - 1.5;
+        const r = this.width / 2 - 3.5;
         const spikeHeight = 2;
         const numSpikes = 16;
 
@@ -84,7 +86,7 @@ export class VerticalSawBlade extends GameObject {
         const closestY = Math.max(bounds.top, Math.min(cy, bounds.bottom));
         const dx = cx - closestX;
         const dy = cy - closestY;
-        if (Math.sqrt(dx * dx + dy * dy) < this.radius) {
+        if (Math.sqrt(dx * dx + dy * dy) < this.radius - COLLISION_ALLOWANCE) {
             game.reset();
         }
         return false;

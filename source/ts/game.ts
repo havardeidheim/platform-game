@@ -3,7 +3,7 @@ import { Player } from './game-objects/player.js';
 import { CheckPoint } from './game-objects/checkpoint.js';
 import { GameKeyboardControls } from './game-keyboard-controls.js';
 import { Point } from './utils/geometry.js';
-import { DIMENSION_STATIC, DIMENSION_1, DIMENSION_2, DIMENSION_INACTIVE_ALPHA } from './utils/constants.js';
+import { DIMENSION_STATIC, DIMENSION_1, DIMENSION_2, DIMENSION_INACTIVE_ALPHA, TARGET_FPS } from './utils/constants.js';
 
 export class Game {
     level: Level;
@@ -13,7 +13,7 @@ export class Game {
     private controls: GameKeyboardControls;
     private animationFrameId: number = 0;
     private lastTime: number = 0;
-    private frameInterval: number = 1000 / 60;
+    private frameInterval: number = 1000 / TARGET_FPS;
     private accumulated: number = 0;
     private ctx: CanvasRenderingContext2D;
 
