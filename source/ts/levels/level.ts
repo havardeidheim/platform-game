@@ -76,6 +76,9 @@ function createGameObject(data: LevelObjectData): GameObject {
 }
 
 export class Level {
+    private static cache = new Map<number, LevelData>();
+    private static readonly LEVEL_COUNT = 10;
+
     level: number;
     sourceFile: string;
     objects: GameObject[];
@@ -89,6 +92,33 @@ export class Level {
     static async load(path: string): Promise<Level> {
         const response = await fetch(path);
         const data: LevelData = await response.json();
+        return new Level(data);
+    }
+
+    static async preloadAll(onProgress: (loaded: number, total: number) => void): Promise<void> {
+        const total = Level.LEVEL_COUNT;
+        let loaded = 0;
+        onProgress(0, total);
+
+        const promises = Array.from({ length: total }, (_, i) => {
+            const levelNumber = i + 1;
+            return fetch(`./levels/level-${levelNumber}.json`)
+                .then(r => r.json())
+                .then((data: LevelData) => {
+                    Level.cache.set(levelNumber, data);
+                    loaded++;
+                    onProgress(loaded, total);
+                });
+        });
+
+        await Promise.all(promises);
+    }
+
+    static fromCached(levelNumber: number): Level {
+        const data = Level.cache.get(levelNumber);
+        if (!data) {
+            throw new Error(`Level ${levelNumber} not preloaded`);
+        }
         return new Level(data);
     }
 }

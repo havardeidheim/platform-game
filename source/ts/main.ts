@@ -1,6 +1,7 @@
 import { Game } from './game.js';
 import { Level } from './levels/level.js';
 import { LevelSelect } from './level-select.js';
+import { LoadingScreen } from './loading-screen.js';
 
 const canvas = document.getElementById('gameCanvas') as HTMLCanvasElement;
 const ctx = canvas.getContext('2d')!;
@@ -18,13 +19,13 @@ function showLevelSelect(): void {
     levelSelect.start();
 }
 
-async function startLevel(levelNumber: number): Promise<void> {
+function startLevel(levelNumber: number): void {
     if (levelSelect) {
         levelSelect.destroy();
         levelSelect = null;
     }
 
-    const level = await Level.load(`./levels/level-${levelNumber}.json`);
+    const level = Level.fromCached(levelNumber);
     currentGame = new Game(level, ctx);
     currentGame.setOnWin(() => {
         showLevelSelect();
@@ -45,4 +46,12 @@ document.addEventListener('visibilitychange', () => {
     }
 });
 
-showLevelSelect();
+const loadingScreen = new LoadingScreen(ctx);
+loadingScreen.start();
+
+Level.preloadAll((loaded, total) => {
+    loadingScreen.setProgress(loaded, total);
+}).then(() => {
+    loadingScreen.destroy();
+    showLevelSelect();
+});
