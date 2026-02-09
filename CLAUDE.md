@@ -32,6 +32,11 @@ The game has a main game loop where logic in run and objects are rendered. each 
 Levels are stores as json in `source\public\levels` and consists of a collection of game objects and placements.
 
 
+## Saving
+
+The game saves level completion and stars in `save-manager.ts`
+
+
 ## Folder structure
 
 Source files are located in `source`, ts fles are located in `source\ts`

@@ -5,6 +5,12 @@ import { GameKeyboardControls } from './game-keyboard-controls.js';
 import { Point } from './utils/geometry.js';
 import { DIMENSION_STATIC, DIMENSION_1, DIMENSION_2, DIMENSION_INACTIVE_ALPHA, TARGET_FPS, PLAYER_HEIGHT } from './utils/constants.js';
 
+export interface LevelResult {
+    frames: number;
+    didRespawn: boolean;
+    levelNumber: number;
+}
+
 export class Game {
     level: Level;
     running: boolean = false;
@@ -23,9 +29,13 @@ export class Game {
     private fpsDisplay: number = 0;
 
     private checkpoint: CheckPoint | null = null;
-    private onWinCallback: (() => void) | null = null;
+    private onWinCallback: ((result: LevelResult) => void) | null = null;
     private onExitCallback: (() => void) | null = null;
     private won: boolean = false;
+
+    // Star rating tracking
+    private frames: number = 0;
+    private respawnCount: number = 0;
 
     // Camera state
     private cameraX: number = 0;
@@ -92,6 +102,7 @@ export class Game {
 
     reset(): void {
         this.currentDimension = DIMENSION_1;
+        this.respawnCount++;
 
         for (const obj of this.level.objects) {
             obj.reset();
@@ -109,12 +120,17 @@ export class Game {
     win(): void {
         if (this.won) return;
         this.won = true;
+        const result: LevelResult = {
+            frames: this.frames,
+            didRespawn: this.respawnCount > 0,
+            levelNumber: this.level.level,
+        };
         setTimeout(() => {
-            this.onWinCallback?.();
+            this.onWinCallback?.(result);
         }, 500);
     }
 
-    setOnWin(callback: () => void): void {
+    setOnWin(callback: (result: LevelResult) => void): void {
         this.onWinCallback = callback;
     }
 
@@ -165,6 +181,8 @@ export class Game {
     }
 
     private update(): void {
+        this.frames++;
+
         // Handle exit to level select
         if (this.controls.hasExited()) {
             this.onExitCallback?.();

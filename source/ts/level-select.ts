@@ -4,12 +4,14 @@ import {
     COLOR_LEVEL_SELECT_ITEM_HOVER,
     COLOR_LEVEL_SELECT_TITLE,
 } from './utils/colors.js';
+import { SaveManager } from './save-manager.js';
 
 export class LevelSelect {
     private ctx: CanvasRenderingContext2D;
     private selectedIndex: number = 0;
     private hoveredIndex: number = -1;
     private onSelect: (levelNumber: number) => void;
+    private saveManager: SaveManager;
     private animationFrameId: number = 0;
     private running: boolean = false;
 
@@ -24,10 +26,12 @@ export class LevelSelect {
     private readonly startX = 80;
     private readonly titleY: number;
     private readonly firstItemY: number;
+    private readonly maxStars = 5;
 
-    constructor(ctx: CanvasRenderingContext2D, onSelect: (levelNumber: number) => void) {
+    constructor(ctx: CanvasRenderingContext2D, onSelect: (levelNumber: number) => void, saveManager: SaveManager) {
         this.ctx = ctx;
         this.onSelect = onSelect;
+        this.saveManager = saveManager;
 
         const listHeight = this.levelCount * this.itemHeight + (this.levelCount - 1) * this.itemGap;
         const titleHeight = 40;
@@ -123,6 +127,17 @@ export class LevelSelect {
             ctx.textAlign = 'left';
             ctx.textBaseline = 'middle';
             ctx.fillText(`Level ${i + 1}`, this.startX + 16, y + this.itemHeight / 2);
+
+            // Stars
+            const earned = this.saveManager.getStars(i + 1);
+            ctx.font = '16px sans-serif';
+            ctx.textAlign = 'right';
+            let starText = '';
+            for (let s = 0; s < this.maxStars; s++) {
+                starText += s < earned ? '\u2605' : '\u2606';
+            }
+            ctx.fillStyle = '#ffd700';
+            ctx.fillText(starText, this.startX + this.itemWidth - 12, y + this.itemHeight / 2);
         }
 
         // Reset textBaseline
