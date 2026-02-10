@@ -12,8 +12,8 @@
     },
     {
       "type": "HorizontalSawBlade",
-      "x": 2540,
-      "y": 290,
+      "x": 2520,
+      "y": 270,
       "range": -40,
       "diameter": 40,
       "dimension": 1
@@ -116,16 +116,16 @@
     },
     {
       "type": "VerticalSawBlade",
-      "x": 1620,
-      "y": 20,
+      "x": 1600,
+      "y": 0,
       "dimension": 1,
       "diameter": 40,
       "range": -140
     },
     {
       "type": "VerticalSawBlade",
-      "x": 1620,
-      "y": -120,
+      "x": 1600,
+      "y": -140,
       "dimension": 1,
       "diameter": 40,
       "range": 140
@@ -140,80 +140,80 @@
     },
     {
       "type": "VerticalSawBlade",
-      "x": 2080,
-      "y": 110,
+      "x": 2060,
+      "y": 90,
       "dimension": 1,
       "diameter": 40,
       "range": -140
     },
     {
       "type": "VerticalSawBlade",
-      "x": 2080,
-      "y": -30,
+      "x": 2060,
+      "y": -50,
       "dimension": 2,
       "diameter": 40,
       "range": 140
     },
     {
       "type": "VerticalSawBlade",
-      "x": 2120,
-      "y": 116,
+      "x": 2100,
+      "y": 96,
       "dimension": 2,
       "diameter": 40,
       "range": -140
     },
     {
       "type": "VerticalSawBlade",
-      "x": 2120,
-      "y": -24,
+      "x": 2100,
+      "y": -44,
       "dimension": 1,
       "diameter": 40,
       "range": 140
     },
     {
       "type": "VerticalSawBlade",
-      "x": 2120,
-      "y": 251,
+      "x": 2100,
+      "y": 231,
       "dimension": 1,
       "diameter": 40,
       "range": -140
     },
     {
       "type": "VerticalSawBlade",
-      "x": 2120,
-      "y": 110,
+      "x": 2100,
+      "y": 90,
       "dimension": 2,
       "diameter": 40,
       "range": 140
     },
     {
       "type": "VerticalSawBlade",
-      "x": 2080,
-      "y": 250,
+      "x": 2060,
+      "y": 230,
       "dimension": 2,
       "diameter": 40,
       "range": -140
     },
     {
       "type": "VerticalSawBlade",
-      "x": 2080,
-      "y": 110,
+      "x": 2060,
+      "y": 90,
       "dimension": 1,
       "diameter": 40,
       "range": 140
     },
     {
       "type": "HorizontalSawBlade",
-      "x": 2060,
-      "y": 270,
+      "x": 2040,
+      "y": 250,
       "range": 80,
       "diameter": 40,
       "dimension": 1
     },
     {
       "type": "HorizontalSawBlade",
-      "x": 2140,
-      "y": 270,
+      "x": 2120,
+      "y": 250,
       "range": -80,
       "diameter": 40,
       "dimension": 2

@@ -68,8 +68,8 @@
     },
     {
       "type": "HorizontalSawBlade",
-      "x": 277,
-      "y": 33,
+      "x": 257,
+      "y": 13,
       "range": -40,
       "diameter": 40,
       "dimension": 1
@@ -100,16 +100,16 @@
     },
     {
       "type": "VerticalSawBlade",
-      "x": -369,
-      "y": -355,
+      "x": -389,
+      "y": -375,
       "dimension": 1,
       "diameter": 40,
       "range": 160
     },
     {
       "type": "VerticalSawBlade",
-      "x": -450,
-      "y": -355,
+      "x": -470,
+      "y": -375,
       "dimension": 1,
       "diameter": 40,
       "range": 40

@@ -28,32 +28,32 @@
     },
     {
       "type": "HorizontalSawBlade",
-      "x": 202,
-      "y": 67,
+      "x": 182,
+      "y": 47,
       "range": 120,
       "diameter": 40,
       "dimension": 1
     },
     {
       "type": "VerticalSawBlade",
-      "x": 224,
-      "y": -73,
+      "x": 204,
+      "y": -93,
       "dimension": 1,
       "diameter": 40,
       "range": 120
     },
     {
       "type": "HorizontalSawBlade",
-      "x": 542,
-      "y": 66,
+      "x": 522,
+      "y": 46,
       "range": -120,
       "diameter": 40,
       "dimension": 1
     },
     {
       "type": "VerticalSawBlade",
-      "x": 522,
-      "y": -73,
+      "x": 502,
+      "y": -93,
       "dimension": 1,
       "diameter": 40,
       "range": 120
@@ -76,16 +76,16 @@
     },
     {
       "type": "VerticalSawBlade",
-      "x": 769,
-      "y": 52,
+      "x": 749,
+      "y": 32,
       "dimension": 1,
       "diameter": 40,
       "range": -94
     },
     {
       "type": "HorizontalSawBlade",
-      "x": 789,
-      "y": 66,
+      "x": 769,
+      "y": 46,
       "range": -94,
       "diameter": 40,
       "dimension": 1
@@ -268,8 +268,8 @@
     },
     {
       "type": "VerticalSawBlade",
-      "x": 2230,
-      "y": -294,
+      "x": 2210,
+      "y": -314,
       "dimension": 1,
       "diameter": 40,
       "range": 120
@@ -292,8 +292,8 @@
     },
     {
       "type": "HorizontalSawBlade",
-      "x": 2015,
-      "y": -117,
+      "x": 1995,
+      "y": -137,
       "range": 800,
       "diameter": 40,
       "dimension": 1

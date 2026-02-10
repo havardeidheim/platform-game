@@ -132,48 +132,48 @@
     },
     {
       "type": "VerticalSawBlade",
-      "x": 1425,
-      "y": -335,
+      "x": 1405,
+      "y": -355,
       "dimension": 1,
       "diameter": 40,
       "range": 40
     },
     {
       "type": "VerticalSawBlade",
-      "x": 1288,
-      "y": -369,
+      "x": 1268,
+      "y": -389,
       "dimension": 1,
       "diameter": 40,
       "range": 40
     },
     {
       "type": "VerticalSawBlade",
-      "x": 1425,
-      "y": -285,
+      "x": 1405,
+      "y": -305,
       "dimension": 1,
       "diameter": 40,
       "range": 40
     },
     {
       "type": "VerticalSawBlade",
-      "x": 1425,
-      "y": -435,
+      "x": 1405,
+      "y": -455,
       "dimension": 1,
       "diameter": 40,
       "range": 40
     },
     {
       "type": "VerticalSawBlade",
-      "x": 1288,
-      "y": -269,
+      "x": 1268,
+      "y": -289,
       "dimension": 1,
       "diameter": 40,
       "range": 40
     },
     {
       "type": "VerticalSawBlade",
-      "x": 1425,
-      "y": -185,
+      "x": 1405,
+      "y": -205,
       "dimension": 1,
       "diameter": 40,
       "range": 40
