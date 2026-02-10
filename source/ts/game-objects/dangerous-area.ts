@@ -18,11 +18,11 @@ export class DangerousArea extends GameObject {
         ctx.lineWidth = LINE_WIDTH;
 
         ctx.beginPath();
-        for (let x = this.x + spacing; x <= this.x + this.width; x += spacing) {
+        for (let x = this.x + spacing; x < this.x + this.width; x += spacing) {
             ctx.moveTo(x, this.y);
             ctx.lineTo(x, this.y + this.height);
         }
-        for (let y = this.y + spacing; y <= this.y + this.height; y += spacing) {
+        for (let y = this.y + spacing; y < this.y + this.height; y += spacing) {
             ctx.moveTo(this.x, y);
             ctx.lineTo(this.x + this.width, y);
         }
