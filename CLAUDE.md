@@ -1,13 +1,10 @@
-
 # Classic platforming game based on an original flash/as3 game
 
 This is a classic platforming game, ported to typescript from an old project written in flash/as3. The game has a thin html wrapper around a simple canvas based platform game.
 
-
 ## For porting
 
 The folder `original-flash-game/PlatformGame/source` contains the source of the original game.
-
 
 ## Technology
 
@@ -18,6 +15,7 @@ The game is written in typescript and use a simple html wrapper. The build is ha
 - Typescript source code: `source/ts/`
 
 ### Building and typechecking
+
 Always use the npm scripts defined in package.json:
 - `npm run build` - typecheck and build for production
 - `npm run typecheck` - typecheck only (no emit)
@@ -37,13 +35,10 @@ The different building blocks of the game are defined in `source/ts/game-objects
 
 Levels are stored as json in `source/public/levels` and consists of a collection of game objects and placements.
 
-
 ## Controls
 
 The game use simple keyboard controls, defined in `source/ts/game-keyboard-controls.ts`
 
-
 ## Saving
 
 The game saves level completion and stars to localStorage in `source/ts/save-manager.ts`
-
