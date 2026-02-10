@@ -141,7 +141,7 @@
     {
       "type": "BouncingBlock",
       "x": 798,
-      "y": 524,
+      "y": 544,
       "width": 10,
       "height": 10,
       "dimension": 1
@@ -173,7 +173,7 @@
     {
       "type": "NormalBlock",
       "x": 553,
-      "y": 518,
+      "y": 538,
       "width": 250,
       "height": 20,
       "dimension": 1
@@ -181,7 +181,7 @@
     {
       "type": "Goal",
       "x": 585,
-      "y": 458,
+      "y": 478,
       "width": 40,
       "height": 60,
       "dimension": 1
@@ -190,7 +190,7 @@
       "type": "TextBlock",
       "x": 337,
       "y": 97,
-      "width": 223,
+      "width": 210,
       "height": 27,
       "dimension": 0,
       "text": "<< Still Dangerous >>"

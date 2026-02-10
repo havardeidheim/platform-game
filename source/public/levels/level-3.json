@@ -278,7 +278,7 @@
       "type": "TextBlock",
       "x": 176,
       "y": -83,
-      "width": 189,
+      "width": 169,
       "height": 27,
       "dimension": 0,
       "text": "Yellow blocks fall"
@@ -287,7 +287,7 @@
       "type": "TextBlock",
       "x": 1429,
       "y": -114,
-      "width": 145,
+      "width": 143,
       "height": 27,
       "dimension": 0,
       "text": "Dangerous >>"
@@ -296,7 +296,7 @@
       "type": "TextBlock",
       "x": 1365,
       "y": 57,
-      "width": 145,
+      "width": 143,
       "height": 27,
       "dimension": 0,
       "text": "Dangerous >>"
@@ -305,7 +305,7 @@
       "type": "TextBlock",
       "x": 1905,
       "y": -38,
-      "width": 63,
+      "width": 68,
       "height": 27,
       "dimension": 0,
       "text": "Down"

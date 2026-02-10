@@ -54,7 +54,7 @@
       "type": "TextBlock",
       "x": 72,
       "y": -58,
-      "width": 109,
+      "width": 212,
       "height": 27,
       "dimension": 0,
       "text": "Use A and D to move "
@@ -63,7 +63,7 @@
       "type": "TextBlock",
       "x": 362,
       "y": -58,
-      "width": 100,
+      "width": 148,
       "height": 27,
       "dimension": 0,
       "text": "Use W to jump"
@@ -72,7 +72,7 @@
       "type": "TextBlock",
       "x": -191,
       "y": 27,
-      "width": 158,
+      "width": 148,
       "height": 27,
       "dimension": 0,
       "text": "CheckPoint >>"
@@ -81,7 +81,7 @@
       "type": "TextBlock",
       "x": 586,
       "y": 27,
-      "width": 100,
+      "width": 88,
       "height": 27,
       "dimension": 0,
       "text": "<< Goal"
