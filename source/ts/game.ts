@@ -216,8 +216,8 @@ export class Game {
         let collided = false;
         const normal = new Point(0, 0);
 
-        this.level.objects.sort((a, b) => b.y - a.y);
-        for (const obj of this.level.objects) {
+        const sortedObjects = [...this.level.objects].sort((a, b) => b.y - a.y);
+        for (const obj of sortedObjects) {
             if (obj.dimension === this.currentDimension || obj.dimension === DIMENSION_STATIC) {
                 normal.x = 0;
                 normal.y = 0;
