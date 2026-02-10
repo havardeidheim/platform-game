@@ -17,9 +17,9 @@ The game is written in typescript and use a simple html wrapper. The build is ha
 ### Building and typechecking
 
 Always use the npm scripts defined in package.json:
-- `npm run build` - typecheck and build for production
-- `npm run typecheck` - typecheck only (no emit)
-- `npm run dev` - typecheck and start dev server
+- `cd C:/source/platformgame && npm run build` - typecheck and build for production
+- `cd C:/source/platformgame && npm run typecheck` - typecheck only (no emit)
+- `cd C:/source/platformgame && npm run dev` - typecheck and start dev server
 
 ## How the game works
 
