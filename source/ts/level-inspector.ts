@@ -164,12 +164,38 @@ export class LevelInspector {
             }
         }
 
+        // 4. Object number labels
+        this.renderObjectLabels();
+
         ctx.restore();
 
         // UI overlays
         this.renderLevelName();
         this.renderControlHints();
         this.renderFps();
+    }
+
+    private renderObjectLabels(): void {
+        const { ctx } = this;
+        ctx.font = 'bold 11px monospace';
+        ctx.textAlign = 'left';
+
+        for (let i = 0; i < this.level.objects.length; i++) {
+            const obj = this.level.objects[i];
+            const label = `${this.level.level}.${i + 1}`;
+            const x = obj.x + 1;
+            const y = obj.y;
+            const metrics = ctx.measureText(label);
+            const pw = 2;
+            const ph = 1;
+            const boxW = metrics.width + pw * 2;
+            const boxH = 13 + ph;
+
+            ctx.fillStyle = 'rgba(0, 0, 0, 0.75)';
+            ctx.fillRect(x, y, boxW, boxH);
+            ctx.fillStyle = '#ffff00';
+            ctx.fillText(label, x + pw, y + 11);
+        }
     }
 
     private renderLevelName(): void {

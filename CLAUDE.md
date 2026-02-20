@@ -35,6 +35,10 @@ The different building blocks of the game are defined in `source/ts/game-objects
 
 Levels are stored as json in `source/public/levels` and consists of a collection of game objects and placements.
 
+## Block numbering
+
+In inspect mode, each object displays a number label formatted as `{level}.{sequence}` where sequence is the 1-based index of the object in that level's JSON objects array (e.g. "6.2" means the 2nd object in level 6's JSON file). When the user refers to a block by number like "block 4.7", this means the 7th object in `source/public/levels/level-4.json`.
+
 ## Controls
 
 The game use simple keyboard controls, defined in `source/ts/game-keyboard-controls.ts`
