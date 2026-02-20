@@ -5,7 +5,7 @@
     {
       "type": "CheckPoint",
       "x": -20,
-      "y": 8,
+      "y": -22,
       "width": 40,
       "height": 60,
       "dimension": 1
@@ -61,17 +61,17 @@
     {
       "type": "NormalBlock",
       "x": -60,
-      "y": 68,
-      "width": 120,
-      "height": 20,
+      "y": 38,
+      "width": 140,
+      "height": 40,
       "dimension": 1
     },
     {
       "type": "NormalBlock",
-      "x": 1295,
+      "x": 1286,
       "y": 150,
-      "width": 100,
-      "height": 20,
+      "width": 140,
+      "height": 40,
       "dimension": 1
     },
     {
@@ -191,7 +191,7 @@
       "x": -135,
       "y": 200,
       "width": 240,
-      "height": 20,
+      "height": 40,
       "dimension": 1
     },
     {
@@ -199,7 +199,7 @@
       "x": 271,
       "y": -53,
       "width": 200,
-      "height": 20,
+      "height": 40,
       "dimension": 1
     },
     {
