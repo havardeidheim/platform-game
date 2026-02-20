@@ -11,6 +11,7 @@ export class LevelSelect {
     private selectedIndex: number = 0;
     private hoveredIndex: number = -1;
     private onSelect: (levelNumber: number) => void;
+    private onInspect: (levelNumber: number) => void;
     private saveManager: SaveManager;
     private animationFrameId: number = 0;
     private running: boolean = false;
@@ -28,9 +29,10 @@ export class LevelSelect {
     private readonly firstItemY: number;
     private readonly maxStars = 5;
 
-    constructor(ctx: CanvasRenderingContext2D, onSelect: (levelNumber: number) => void, saveManager: SaveManager) {
+    constructor(ctx: CanvasRenderingContext2D, onSelect: (levelNumber: number) => void, onInspect: (levelNumber: number) => void, saveManager: SaveManager) {
         this.ctx = ctx;
         this.onSelect = onSelect;
+        this.onInspect = onInspect;
         this.saveManager = saveManager;
 
         const listHeight = this.levelCount * this.itemHeight + (this.levelCount - 1) * this.itemGap;
@@ -51,6 +53,9 @@ export class LevelSelect {
                     break;
                 case 'Enter':
                     this.onSelect(this.selectedIndex + 1);
+                    break;
+                case 'KeyI':
+                    this.onInspect(this.selectedIndex + 1);
                     break;
             }
         };
@@ -140,8 +145,13 @@ export class LevelSelect {
             ctx.fillText(starText, this.startX + this.itemWidth - 12, y + this.itemHeight / 2);
         }
 
-        // Reset textBaseline
+        // Hint text below the list
+        const hintY = this.firstItemY + this.levelCount * (this.itemHeight + this.itemGap) + 20;
+        ctx.font = '16px monospace';
+        ctx.fillStyle = '#aaaaaa';
+        ctx.textAlign = 'left';
         ctx.textBaseline = 'alphabetic';
+        ctx.fillText('Enter - play    I - inspect', this.startX, hintY);
     }
 
     private getIndexFromMouse(e: MouseEvent): number {
