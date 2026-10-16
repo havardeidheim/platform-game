@@ -1,44 +1,20 @@
 # Classic platforming game based on an original flash/as3 game
 
-This is a classic platforming game, ported to typescript from an old project written in flash/as3. The game has a thin html wrapper around a simple canvas based platform game.
+A classic platforming game written in Flash/AS3 (2011-2012), and two TypeScript ports of it that run in the browser. Each level has a start, checkpoints and a goal. The gimmick is that every object exists in one of two "dimensions": the player switches between them with space and only interacts with objects in the current dimension.
 
-## For porting
+## Folders
 
-The folder `original-flash-game/PlatformGame/source` contains the source of the original game.
+- `original-flash-game/` - the original Flash project. `PlatformGame/source` has the AS3 source, `PlatformGame/PlatformGame.fla` holds the levels and graphics (XFL format, a zip archive).
+- `opus-4-6-manual-port/` - the first port, made with Opus 4.6 and polished by hand. Redrawn graphics, 1280x720 at 60fps and several gameplay changes, so the balance differs from the original.
+- `full-direct-port/` - a faithful port, as close to the original as possible: same logic and balance, levels and graphics extracted from the `.fla`, original menus, 800x480 at 40fps. Use it as the reference for how the original plays.
 
-## Technology
+`PORT-COMPARISON.md` lists the differences between the two ports.
 
-The game is written in typescript and use a simple html wrapper. The build is handled using vite and scss is used for styling. The game runs at 60fps with a resolution of 1280x720.
+Each port is a standalone Vite + TypeScript + SCSS project with its own `package.json` and `CLAUDE.md`. Run the npm scripts from the port's folder:
 
-- Html entry point: `source/index.html`
-- Scss styling: `source/scss/`
-- Typescript source code: `source/ts/`
+- `npm install`
+- `npm run dev` - typecheck and start dev server
+- `npm run build` - typecheck and build for production
+- `npm run typecheck` - typecheck only
 
-### Building and typechecking
-
-Always use the npm scripts defined in package.json:
-- `cd C:/source/platformgame && npm run build` - typecheck and build for production
-- `cd C:/source/platformgame && npm run typecheck` - typecheck only (no emit)
-- `cd C:/source/platformgame && npm run dev` - typecheck and start dev server
-
-## How the game works
-
-The game consists of levels. Each level has a start and a goal, super mario style, with checkpoints. The gimmick is that each game object exists in a given "dimension", the player can switch between the 2 dimensions by pressing space and the player only interacts with the object in their current dimension.
-
-The game has a main game loop where logic in run and objects are rendered. each game object has its own logic based on collision and different effects.
-
-## Game objects
-
-The different building blocks of the game are defined in `source/ts/game-objects`, this includes the level building blocks and the player.
-
-## Levels / map definitions
-
-Levels are stored as json in `source/public/levels` and consists of a collection of game objects and placements.
-
-## Controls
-
-The game use simple keyboard controls, defined in `source/ts/game-keyboard-controls.ts`
-
-## Saving
-
-The game saves level completion and stars to localStorage in `source/ts/save-manager.ts`
+Keep changes to one port at a time, and keep `full-direct-port` faithful to the original.
