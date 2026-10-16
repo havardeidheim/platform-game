@@ -1,0 +1,39 @@
+// Same page setup as the original PlatformGame.html: grey page, stage scaled to fit ("showAll")
+$page-color: #999999;
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: $page-color;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#stage {
+    display: block;
+    touch-action: none;
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+// The original embedded Times New Roman. Use it when installed, otherwise the
+// metric-compatible Liberation Serif bundled with the game.
+@font-face {
+    font-family: 'GameTimes';
+    font-weight: normal;
+    src: local('Times New Roman'), local('TimesNewRomanPSMT'), url('/fonts/LiberationSerif-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'GameTimes';
+    font-weight: bold;
+    src: local('Times New Roman Bold'), local('TimesNewRomanPS-BoldMT'), url('/fonts/LiberationSerif-Bold.ttf') format('truetype');
+}
