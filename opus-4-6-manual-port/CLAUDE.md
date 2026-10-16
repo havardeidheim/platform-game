@@ -2,9 +2,11 @@
 
 This is a classic platforming game, ported to typescript from an old project written in flash/as3. The game has a thin html wrapper around a simple canvas based platform game.
 
+This folder holds the first port (made with Opus 4.6 and polished by hand). It has gameplay changes compared to the original; see `../PORT-COMPARISON.md`. For a faithful port see `../full-direct-port`.
+
 ## For porting
 
-The folder `original-flash-game/PlatformGame/source` contains the source of the original game.
+The folder `../original-flash-game/PlatformGame/source` contains the source of the original game.
 
 ## Technology
 
@@ -16,10 +18,10 @@ The game is written in typescript and use a simple html wrapper. The build is ha
 
 ### Building and typechecking
 
-Always use the npm scripts defined in package.json:
-- `cd C:/source/platformgame && npm run build` - typecheck and build for production
-- `cd C:/source/platformgame && npm run typecheck` - typecheck only (no emit)
-- `cd C:/source/platformgame && npm run dev` - typecheck and start dev server
+Always use the npm scripts defined in package.json, run from this folder (`opus-4-6-manual-port`):
+- `npm run build` - typecheck and build for production
+- `npm run typecheck` - typecheck only (no emit)
+- `npm run dev` - typecheck and start dev server
 
 ## How the game works
 
